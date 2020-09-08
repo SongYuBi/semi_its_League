@@ -45,40 +45,59 @@
 	
 	    <div class="input-form">
 		<label for="name">연락처</label>
-		<div class="input-value">
 		
+		<div class="input-value">
 		<span><c:out/></span>
 		</div>		
+		
 	</div>
 	
 	<br>
 	<div class="input-form">
 		<label for="name">주민등록번호</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 	<br>
 	<br>
 	<div class="input-form">
 		<label for="name">주소</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 	<br>
 	<br>
 	<div class="input-form">
 		<label for="name">계좌</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 	<br>
 	<br>
 	<div class="input-form">
 		<label for="name">직업</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 	<br>
 	<br>
 	<div class="input-form">
 		<label for="name">급수</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 	<br>
 	<br>
 	<div class="input-form">
 		<label for="name">차량유무</label>
+		<div class="input-value">
+		<span><c:out/></span>
+		</div>
 	</div>
 
 	 

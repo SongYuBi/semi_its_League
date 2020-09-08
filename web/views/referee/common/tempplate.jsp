@@ -28,7 +28,9 @@
 </style>
 </head>
 <body>
-	<jsp:include page="./sideBar.jsp"></jsp:include>
+	
+	<jsp:include page="/views/referee/common/adminSideBar.jsp"></jsp:include>
+	
 	<h1 align="center">defaultJsp</h1>
 	<div id="default-div">
 		<div class="box1">
