@@ -174,6 +174,7 @@ border-bottom:2px solid gray;
 <script type="text/javascript">
 
 	function login_click(){
+		console.log("??");
 		window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
 		
 	}

@@ -35,14 +35,15 @@
 </style>
 </head>
 <body>
+<form name="login" action="<%= request.getContextPath() %>/login.me" method="post">
 	<div id="login_position">
-		<input type="text" id="user_id" name="user_id" class="w3-input w3-hover" placeholder="Email">
+		<input type="Email" id="user_id" name="user_id" class="w3-input w3-hover" placeholder="Email">
 		 <br> 
 		 <input	type="password" id="password" name="password" class="w3-input w3-hover" placeholder="Password"> 
-		 <button id = "login_button" class="w3-btn w3-round">로그인</button>
+		 <button id = "login_button" class="w3-btn w3-round" onclick="moveClose();" >로그인</button>
 		 <div id="insert_clue" onclick="insert_clue();">회원 가입</div><div id="insert_clue" onclick="search_password();">비밀번호 찾기 &nbsp</div>
 	</div>
-
+</form>
 
 <script type="text/javascript">
 function insert_clue(){
@@ -55,6 +56,8 @@ function search_password(){
 	location.href="../login/search_member.jsp";
 	
 }
+
+
 </script>
 </body>
 </html>

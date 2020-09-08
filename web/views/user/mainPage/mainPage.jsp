@@ -132,14 +132,27 @@ th {
 <body>
 	<jsp:include
 		page="${ application.contextPath }/views/common/sideBar.jsp"/>
+		
 	<div class="wrapper">
 		<div class="head">
 			<div align="right">
+			<c:if test="${ empty sessionScope.loginUser }">
 				<ul class="toplo">
-					<li class="lil" style="color: #4169E1; font-size: 20px;">로그인</li>
+					<li class="lil" style="color: #4169E1; font-size: 20px;"><div onclick="login();">로그인</div></li>
 					<li style="font-size: 18px;">또는</li>
 					<li class="lil" style="color: #4169E1; font-size: 20px;">회원가입</li>
 				</ul>
+			</c:if>
+			<c:if test="${!empty sessionScope.loginUser }">
+			<div id="userInfo">
+				<label><c:out value="${sessionScope.loginUser.pfName }" />
+					님의 방문을 환영합니다.</label>
+				<div class="btn" align="right">
+					<div id="changeInfo" onclick="updateMember();">정보수정</div>
+					<div id="logoutBtn" onclick="logout();">로그아웃</div>
+				</div>
+			</div>
+		</c:if>
 				<div align="center">
 					<img src="../../../resources/image/banner.png"
 						style="cursor: pointer">
@@ -716,6 +729,23 @@ th {
 			}
 
 		};
+		
+		
+		
+		/*  로그인 창 띄우기 */
+		function login(){
+			console.log("asd");
+			window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
+		}
+		
+		function logout(){
+			var check = window.confirm("로그아웃");
+			
+			if(check){
+				location.href ="<%=request.getContextPath()%>/logout.me";
+			}
+		}
+		
 	</script>
 
 

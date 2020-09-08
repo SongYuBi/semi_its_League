@@ -1,4 +1,4 @@
-package com.kh.semi.user.vo;
+package com.kh.semi.user.model.vo;
 
 import java.sql.Date;
 
@@ -13,27 +13,11 @@ public class Profile_vo implements java.io.Serializable{
 	private String pfAddress;
 	private String pfGender;
 	private String pfGrade;
-	private int prId;
 	private Date pfModifyDate;
+	private String pfPhone;
 	
 	public Profile_vo() {
 		
-	}
-
-	public Profile_vo(int pfId, String pfPwd, String pfNumber, String pfName, Date pfDate, String pfEmail,
-			String pfAddress, String pfGender, String pfGrade, int prId, Date pfModifyDate) {
-		super();
-		this.pfId = pfId;
-		this.pfPwd = pfPwd;
-		this.pfNumber = pfNumber;
-		this.pfName = pfName;
-		this.pfDate = pfDate;
-		this.pfEmail = pfEmail;
-		this.pfAddress = pfAddress;
-		this.pfGender = pfGender;
-		this.pfGrade = pfGrade;
-		this.prId = prId;
-		this.pfModifyDate = pfModifyDate;
 	}
 
 	public int getPfId() {
@@ -108,13 +92,6 @@ public class Profile_vo implements java.io.Serializable{
 		this.pfGrade = pfGrade;
 	}
 
-	public int getPrId() {
-		return prId;
-	}
-
-	public void setPrId(int prId) {
-		this.prId = prId;
-	}
 
 	public Date getPfModifyDate() {
 		return pfModifyDate;
@@ -124,12 +101,38 @@ public class Profile_vo implements java.io.Serializable{
 		this.pfModifyDate = pfModifyDate;
 	}
 
+	public String getPfPhone() {
+		return pfPhone;
+	}
+
+	public void setPfPhone(String pfPhone) {
+		this.pfPhone = pfPhone;
+	}
+
 	@Override
 	public String toString() {
 		return "Profile_vo [pfId=" + pfId + ", pfPwd=" + pfPwd + ", pfNumber=" + pfNumber + ", pfName=" + pfName
 				+ ", pfDate=" + pfDate + ", pfEmail=" + pfEmail + ", pfAddress=" + pfAddress + ", pfGender=" + pfGender
-				+ ", pfGrade=" + pfGrade + ", prId=" + prId + ", pfModifyDate=" + pfModifyDate + "]";
+				+ ", pfGrade=" + pfGrade + ", pfModifyDate=" + pfModifyDate + ", pfPhone=" + pfPhone
+				+ "]";
 	}
+
+	public Profile_vo(int pfId, String pfPwd, String pfNumber, String pfName, Date pfDate, String pfEmail,
+			String pfAddress, String pfGender, String pfGrade,  Date pfModifyDate, String pfPhone) {
+		super();
+		this.pfId = pfId;
+		this.pfPwd = pfPwd;
+		this.pfNumber = pfNumber;
+		this.pfName = pfName;
+		this.pfDate = pfDate;
+		this.pfEmail = pfEmail;
+		this.pfAddress = pfAddress;
+		this.pfGender = pfGender;
+		this.pfGrade = pfGrade;
+		this.pfModifyDate = pfModifyDate;
+		this.pfPhone = pfPhone;
+	}
+	
 	
 	
 	
