@@ -83,12 +83,12 @@
 			
 
 			<div style="text-align:center;">
-				<input class="w3-check" id="check_box" type="checkbox">
-				<label>잇츠리그 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관(선택),프로모션 정보 수신(선택)에 모두
+				<input class="w3-check" id="check_box" type="checkbox" name="check_all" onclick="all_click();">
+				<label>잇츠리그 이용약관, 개인정보 수집 및 이용, 위치정보 이용약관,프로모션 정보 수신에 모두
 					동의 합니다.</label>
 			</div>
 			<div>
-				<input class="w3-check" style="float: left" id="check_box"
+				<input class="w3-check" style="float: left" id="check_box" name="check1"
 					type="checkbox">
 				<label id="agree">잇츠리그 이용약관 동의(필수)</label>
 				<br>
@@ -97,7 +97,7 @@
 				<textarea rows="5" cols="60" readonly>여러분 환영합니다.</textarea>
 			</div>
 			<div>
-				<input class="w3-check" style="float: left" id="check_box"
+				<input class="w3-check" style="float: left" id="check_box" name="check2"
 					type="checkbox">
 				<label id="agree">개인정보 수집 및 이용 동의(필수)</label>
 				<br>
@@ -106,7 +106,7 @@
 				<textarea rows="5" cols="60" readonly>여러분 환영합니다.<br> </textarea>
 			</div>
 			<div>
-				<input class="w3-check" style="float: left" id="check_box"
+				<input class="w3-check" style="float: left" id="check_box" name="check3"
 					type="checkbox">
 				<label id="agree">위치정보 이용약관 동의(필수)</label>
 				<br>
@@ -115,9 +115,9 @@
 				<textarea rows="5" cols="60" readonly>여러분 환영합니다.<br> </textarea>
 			</div>
 			<div>
-				<input class="w3-check" style="float: left" id="check_box"
+				<input class="w3-check" style="float: left" id="check_box" name="check4"
 					type="checkbox">
-				<label id="agree">프로모션 정보 수신 동의(선택)</label>
+				<label id="agree">프로모션 정보 수신 동의(필수)</label>
 				<br>
 				<br>
 				<br>
@@ -132,13 +132,70 @@
 		</div>
 		<div class="midBottom">
 			<div>
-				<button class="w3-btn w3-gray" style="color: white;" id="btn">취소</button>
-				<button class="w3-btn w3-red" id="btn">확인</button>
+				<button class="w3-btn w3-gray" style="color: white;" id="btn" onclick="backpage();">취소</button>
+				<button class="w3-btn w3-red" id="btn" onclick="nextpage();">확인</button>
 			</div>
 		</div>
 		<div class="footer">Footer</div>
 	</div>
-
+	
+<script type="text/javascript">
+	function nextpage(){
+		var check1 = 0;
+		var check2 = 0;
+		var check3 = 0;
+		var check4 = 0;
+		
+		if($("input:checkbox[name=check1]").is(":checked") == true){
+			check1 = 1;
+		}
+		if($("input:checkbox[name=check2]").is(":checked") == true){
+			check2 = 1;
+		}
+		if($("input:checkbox[name=check3]").is(":checked") == true){
+			check3 = 1;
+		}
+		if($("input:checkbox[name=check4]").is(":checked") == true){
+			check4 = 1;
+		}
+		
+		if((check1+check2+check3+check4) == 4){
+			location.href = 'insert_member_view.jsp';
+			check1= 0;
+			check2= 0;
+			check3= 0;
+			check4= 0;
+			
+		}else{
+			alert("모든 약관에 동의 해주세요.");
+		}
+		
+	}
+	
+	function backpage(){
+		location.href = '../mainPage/mainPage.jsp';
+	}
+	
+	function all_click(){
+		
+		if($("input:checkbox[name=check4]").is(":checked") == true){
+			$("input:checkbox[name=check1]").prop("checked",false);
+			$("input:checkbox[name=check2]").prop("checked",false);
+			$("input:checkbox[name=check3]").prop("checked",false);
+			$("input:checkbox[name=check4]").prop("checked",false);
+		}else{
+			$("input:checkbox[name=check1]").prop("checked",true);
+			$("input:checkbox[name=check2]").prop("checked",true);
+			$("input:checkbox[name=check3]").prop("checked",true);
+			$("input:checkbox[name=check4]").prop("checked",true);
+		}
+		
+	}
+	
+	
+	
+	
+</script>
 
 </body>
 </html>
