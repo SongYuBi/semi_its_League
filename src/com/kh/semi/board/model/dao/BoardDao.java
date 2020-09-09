@@ -35,7 +35,7 @@ public class BoardDao {
 		
 		String query = prop.getProperty("insertBoard");
 		
-		
+		//ㅇ
 		
 		
 		
