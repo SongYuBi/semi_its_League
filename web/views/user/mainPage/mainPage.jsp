@@ -602,8 +602,8 @@ th {
 		});
 	</script>
 
-	
-		   <script type="text/javascript">
+  <script type="text/javascript">
+
       $(function(){
          for(var i = 1; i < 11; i++) {
             if(i === 1) {
@@ -654,7 +654,7 @@ th {
          });  */
          
          
-         //ì²« ë² ì§¸ div
+
        if($(val).hasClass("date1")){         
             for(var i = 1; i < 11; i++) {
                if(i === 1) {
@@ -665,7 +665,7 @@ th {
             }
        }
        
-       // ë   ë² ì§¸ div
+
        if($(val).hasClass("date2")){
           for(var i = 1; i < 11; i++) {
                if(i === 2) {
@@ -675,7 +675,7 @@ th {
                   } 
                }
           }
-       // ì ¸ ë² ì§¸ div
+
        if($(val).hasClass("date3")){
           for(var i = 1; i < 11; i++) {
                if(i === 3) {
@@ -685,7 +685,7 @@ th {
                   } 
                }
           }
-       // ë ¤ ë² ì§¸ div
+
        if($(val).hasClass("date4")){
           for(var i = 1; i < 11; i++) {
                if(i === 4) {
@@ -695,7 +695,7 @@ th {
                   } 
                }
           }
-       // ë ¤ì ¯ ë² ì§¸ div
+
        if($(val).hasClass("date5")){
           for(var i = 1; i < 11; i++) {
                if(i === 5) {
@@ -705,7 +705,7 @@ th {
                   } 
                }
           }
-       // ì ¬ì ¯ ë² ì§¸ div
+
        if($(val).hasClass("date6")){
           for(var i = 1; i < 11; i++) {
                if(i === 6) {
@@ -715,7 +715,7 @@ th {
                   } 
                }
           }
-       // ì ¼ê³± ë² ì§¸ div
+
        if($(val).hasClass("date7")){
           for(var i = 1; i < 11; i++) {
                if(i === 7) {
@@ -725,7 +725,7 @@ th {
                   } 
                }
           }
-       // ì ¬ë   ë² ì§¸ div
+
        if($(val).hasClass("date8")){
           for(var i = 1; i < 11; i++) {
                if(i === 8) {
@@ -735,7 +735,7 @@ th {
                   } 
                }
           }
-       // ì  í   ë² ì§¸ div
+
        if($(val).hasClass("date9")){
           for(var i = 1; i < 11; i++) {
                if(i === 9) {
@@ -745,7 +745,7 @@ th {
                   } 
                }
           }
-       // ì ´ ë² ì§¸ div
+
        if($(val).hasClass("date10")){
           for(var i = 1; i < 11; i++) {
                if(i === 10) {
@@ -756,15 +756,13 @@ th {
                }
           }
        
+
       
        
       };
-		
-		
-		
-		
-		
-		
-</script>
+      
+
+   </script>
+
 </body>
 </html>
