@@ -6,6 +6,36 @@ pageEncoding="UTF-8"/>
 <html>
 <head>
 <style>
+
+
+
+ /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+    
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 20%; /* Could be more or less, depending on screen size */                          
+        }
+      
+
+
+
+
 	#div_1{
 		width:400px;
 		height:600px;
@@ -70,9 +100,71 @@ pageEncoding="UTF-8"/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+function validate() {
+    var re = /^[a-zA-Z0-9]{4,12}$/; // 아이디와 패스워드가 적합한지 검사할 정규식
+    var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+    // 이메일이 적합한지 검사할 정규식
+    
+    //이름 정규화 공식
+     var regul3 = /^[가-힝a-zA-Z]{2,}$/;
+
+  
+  
+    var name = document.getElementById("name");
+
+    var Jumin_1 = document.getElementById("Jumin_1");
+    var Jumin_2 = document.getElementById("Jumin_2");
+  
+   
+	
+
+	if ((name.value=="")){
+        alert("이름을 입력해주세요");
+        name.focus();
+        return false;
+    }
+	
+	
+	if ((Jumin_1.value=="")){
+        alert("주민번호를 입력해주세요");
+        Jumin_1.focus();
+        return false;
+    }
+
+	if ((Jumin_2.value=="")){
+        alert("주민번호를 입력해주세요");
+        Jumin_2.focus();
+        return false;
+    }
+	
+
+	
+	
+}
+</script>
 </head>
 <body>
+<c:if test="${ !empty requestScope.email }">
 
+	<!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>    
+        <br>
+        <br>                                                           
+        	<h4> ${email }</h4>
+	
+	</div>
+
+      </div>
+ 
+    </div>
+</c:if>
+
+<form name="insertUser" action="<%= request.getContextPath() %>/searchEmail.me" method="post" onsubmit="return validate();">
 	<jsp:include page="${ application.getContextPath() }/views/common/sideBar.jsp"></jsp:include>
 	
 	<div class="wrapper">
@@ -83,12 +175,12 @@ pageEncoding="UTF-8"/>
 	  <div id="div_1">
 
 <label style="float:left;">이름</label>
-<input type="text" id="name" name="name" class="w3-input w3-border w3-border-black" >
+<input type="text" id="name" name="name" class="w3-input w3-border w3-border-black" maxlength="20" >
 <br>
 <label style="float:left;" >주민등록번호</label>
 <br><br>
 <div style="float:left;">
-<input type="text" id="Jumin_1" name="Jumin_1" class="w3-input w3-border w3-border-black" style="float:left">
+<input type="text" id="Jumin_1" name="Jumin_1" class="w3-input w3-border w3-border-black" style="float:left" maxlength="6">
 </div>
 
 <div style="float:left;">
@@ -96,18 +188,55 @@ pageEncoding="UTF-8"/>
 </div>
 
 <div style="float:right;">
-<input type="text"  style="float:left" id="Jumin_2" name="Jumin_2" class="w3-input w3-border w3-border-black">
+<input type="text"  style="float:left" id="Jumin_2" name="Jumin_2" class="w3-input w3-border w3-border-black" maxlength="7">
 </div>
 <br><br><br>
 
 
 
-
-	<button class="w3-btn w3-red" id="password_search">이메일 찾기</button></div>
+	<input type="submit" value="이메일 찾기" class="w3-btn w3-red" id="password_search">
+	
+</form>
 	</div>
 	  </div>
 	  <div class="midBottom">
 	  <div class="footer">Footer</div>
 	</div>
+	
+	
+	
+	<script>
+
+	$(function (){
+
+		// Get the modal
+	    var modal = document.getElementById('myModal');
+
+	    // Get the button that opens the modal
+	    var btn = document.getElementById("myBtn");
+
+	    // Get the <span> element that closes the modal
+	    var span = document.getElementsByClassName("close")[0];                                          
+
+	    // When the user clicks on the button, open the modal 
+	   
+	        modal.style.display = "block";
+	 
+
+	    // When the user clicks on <span> (x), close the modal
+	    span.onclick = function() {
+	        modal.style.display = "none";
+	        location.href="views/user/mainPage/mainPage.jsp";
+
+	    }
+
+	    // When the user clicks anywhere outside of the modal, close it
+	    window.onclick = function(event) {
+	        if (event.target == modal) {
+	            modal.style.display = "none";
+	        }
+	    }
+	})
+	</script>
 </body>
 </html>
