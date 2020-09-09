@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
@@ -9,129 +9,130 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript"
-	src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet"
-	href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
+   href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
 <link rel="stylesheet" type="text/css"
-	href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet"
-	href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet"
-	href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <title>Insert title here</title>
 
 <style type="text/css">
  
 
 .wBtn {
-	position: relative;
+   position: relative;
 }
 
 .wBtn button {
-	position: absolute;
-	z-index: 10;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 71px;
-	height: 71px;
-	border-radius: 100%;
-	border: none;
-	background: transparent;
+   position: absolute;
+   z-index: 10;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 71px;
+   height: 71px;
+   border-radius: 100%;
+   border: none;
+   background: transparent;
 }
 
 .wBtn button:before {
-	font-family: "xeicon";
-	color: #000;
-	font-size: 30px;
+   font-family: "xeicon";
+   color: #000;
+   font-size: 30px;
 }
 
 .wBtn button.slick-prev {
-	left: -250px;
-	font-size: 0;
-	color: transparent;
+   left: -250px;
+   font-size: 0;
+   color: transparent;
 }
 
 .wBtn button.slick-prev:before {
-	content: "\e906";
+   content: "\e906";
 }
 
 .wBtn button.slick-next {
-	right: -70px;
-	font-size: 0;
-	color: transparent;
+   right: -70px;
+   font-size: 0;
+   color: transparent;
 }
 
 .wBtn button.slick-next:before {
-	content: "\e907";
+   content: "\e907";
 }
 
 *:focus {
-	outline: none;
+   outline: none;
 }
 
 .datediv {
-	background-color: white;
+   background-color: white;
 }
 
 .datediv:hover {
-	cursor: pointer;
+   cursor: pointer;
 }
 
 .datedivB {
-	background-color: #3534A5;
-	border: none;
-	color: white;
+   background-color: #3534A5;
+   border: none;
+   color: white;
 }
 
 .wdiv {
-	height: 120px !important;
-	margin: 34px;
-	width: 300px;
+   height: 120px !important;
+   margin: 34px;
+   width: 300px;
 }
 
 select {
-	width: 100px;
-	font-size: 20px !important;
-	height: 40px;
-	padding: 0 0 0 10px;
-	margin: 0 !important;
+   width: 100px;
+   font-size: 20px !important;
+   height: 40px;
+   padding: 0 0 0 10px;
+   margin: 0 !important;
 }
 
 h3 {
-	font-size: 2em !important;
+   font-size: 2em !important;
 }
 
 tr {
-	height: 100px;
+   height: 100px;
 }
 
 th {
-	font-size: 2em;
-	text-align: center !important;
+   font-size: 2em;
+   text-align: center !important;
 }
  .toplo{
- 	list-style:none;
+    list-style:none;
     margin:0;
     padding:0;
  }
  ul li{
- 	float: right;
- 	margin : 2px;
- 	}
+    float: right;
+    margin : 2px;
+    }
  .lil,.banner{
- 	cursor:pointer;
- 	pont-size:20px;
+    cursor:pointer;
+    pont-size:20px;
  }
  .ta{
- 	border-bottom:1px solid black;
+    border-bottom:1px solid black;
  }
 
 </style>
 
 </head>
 <body>
+
 	<jsp:include
 		page="${ application.contextPath }/views/common/sideBar.jsp"/>
 		
@@ -743,5 +744,6 @@ th {
 		
 		
 </script>
+
 </body>
 </html>
