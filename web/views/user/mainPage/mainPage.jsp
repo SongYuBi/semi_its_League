@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -132,6 +133,8 @@ th {
 <body>
    <jsp:include
       page="${ application.contextPath }/views/common/sideBar.jsp"/>
+   <jsp:include
+		  page="${ application.contextPath }/views/user/comman/login.jsp"/>
       
    <div class="wrapper">
       <div class="head">
@@ -753,26 +756,7 @@ th {
 		 
       };
       
-      
-      
-      
-      
-      /*  로그인 창 띄우기 */
-      function login(){
-         console.log("asd");
-         window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
-      }
-      
-      function logout(){
-         var check = window.confirm("로그아웃");
-         
-         if(check){
-            location.href ="<%=request.getContextPath()%>/logout.me";
-         }
-      }
-      
-      
-      
+
    </script>
 
 
