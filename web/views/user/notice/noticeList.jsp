@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeMain.css">
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeStyle.css">
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeDefault.css">
-<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/userDefaultLayout.css">
 <style>
 /* 	.header {
 		grid-area: header;
@@ -90,7 +90,7 @@
 </style>
 </head>
 <body>
-	<jsp:include page="${ application.getContextPath() }/views/common/refereeSideBar.jsp"></jsp:include>
+	<jsp:include page="/views/common/sideBar.jsp"></jsp:include>
 	
 	<div class="wrapper">
 		<div class="head">head
