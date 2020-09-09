@@ -23,6 +23,8 @@
 <title>Insert title here</title>
 
 <style type="text/css">
+ 
+
 .wBtn {
 	position: relative;
 }
@@ -133,14 +135,18 @@ th {
 	<jsp:include
 		page="${ application.contextPath }/views/common/sideBar.jsp"/>
 		
+	<jsp:include
+		page="${ application.contextPath }/views/user/comman/login.jsp"/>
+		
 	<div class="wrapper">
 		<div class="head">
 			<div align="right">
 			<c:if test="${ empty sessionScope.loginUser }">
 				<ul class="toplo">
-					<li class="lil" style="color: #4169E1; font-size: 20px;"><div onclick="login();">로그인</div></li>
+					<li class="lil" style="color: #4169E1; font-size: 20px;"><div id="myBtn">로그인</div></li>
 					<li style="font-size: 18px;">또는</li>
-					<li class="lil" style="color: #4169E1; font-size: 20px;">회원가입</li>
+					<li class="lil" style="color: #4169E1; font-size: 20px;"><div><a href="../login/insert_member.jsp">회원가입</a></div></li>
+
 				</ul>
 			</c:if>
 			<c:if test="${!empty sessionScope.loginUser }">
@@ -732,22 +738,10 @@ th {
 		
 		
 		
-		/*  로그인 창 띄우기 */
-		function login(){
-			console.log("asd");
-			window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
-		}
 		
-		function logout(){
-			var check = window.confirm("로그아웃");
-			
-			if(check){
-				location.href ="<%=request.getContextPath()%>/logout.me";
-			}
-		}
 		
-	</script>
-
-
+		
+		
+</script>
 </body>
 </html>

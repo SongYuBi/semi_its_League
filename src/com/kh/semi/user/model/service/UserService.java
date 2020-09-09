@@ -32,4 +32,33 @@ public class UserService {
 		return loginUser;
 	}
 
+	public int searchPassword(Profile_vo vo) {
+		Connection con = getConnection();
+		int result = 0;
+		int search = dao.searchUser(con, vo);
+		if(search > 0) {
+			result = dao.searchPassword(con, vo);
+			if(result > 0) {
+				close(con);
+			}
+		}else {
+			System.out.println("유저 조회 불가");
+		}
+		
+		
+		
+		return result;
+	}
+
+	public String searchEmail(Profile_vo vo) {
+		Connection con = getConnection();
+		
+		String email = dao.searchEmail(con,vo);
+		System.out.println(email);
+		if(email != "") {
+			close(con);
+		}
+		return email;
+	}
+
 }
