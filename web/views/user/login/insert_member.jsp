@@ -1,5 +1,5 @@
 <jsp:directive.page language="java"
-	contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" />
+   contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" />
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
@@ -10,68 +10,67 @@
 <title>Insert title here</title>
 <style>
 #check_box {
-	width: 30px;
-	height: 30px;
+   width: 30px;
+   height: 30px;
 }
 
 #agree {
-	float: left;
+   float: left;
 }
 
 #btn {
-	width: 275px;
-	height: 50px;
-	color: white;
+   width: 275px;
+   height: 50px;
+   color: white;
 }
 
 .header {
-	grid-area: header;
-	background-color: LightSeaGreen;
+   grid-area: header;
+   background-color: LightSeaGreen;
 }
 
 .leftCol {
-	grid-area: leftCol;
-	background-color: orange;
+   grid-area: leftCol;
+   background-color: orange;
 }
 
 .rightCol {
-	grid-area: rightCol;
-	background-color: lightblue;
+   grid-area: rightCol;
+   background-color: lightblue;
 }
 
 .midTop {
-	grid-area: midTop;
-	
-	text-align:center;
-	   margin: 0 auto;
+   grid-area: midTop;
+   
+   text-align:center;
+      margin: 0 auto;
 }
 
 .midBottom {
-	grid-area: midBottom;
-	
-	text-align:center;
-	   margin: 0 auto;
+   grid-area: midBottom;
+   
+   text-align:center;
+      margin: 0 auto;
 }
 
 .footer {
-	grid-area: footer;
-	background-color: lightgreen;
+   grid-area: footer;
+   background-color: lightgreen;
 }
 
 .wrapper {
-	display: grid;
-	grid-template-columns: 1fr 4fr 4fr 1fr;
-	/* grid-template-rows: 50px 100px 100px 30px; */
-	grid-auto-rows: minmax(100px, auto);
-	grid-template-areas: "header header header header"
-		"leftCol midTop midTop rightCol"
-		"leftCol midBottom midBottom rightCol" "footer footer footer footer";
-	grid-gap: 5px;
+   display: grid;
+   grid-template-columns: 1fr 4fr 4fr 1fr;
+   /* grid-template-rows: 50px 100px 100px 30px; */
+   grid-auto-rows: minmax(100px, auto);
+   grid-template-areas: "header header header header"
+      "leftCol midTop midTop rightCol"
+      "leftCol midBottom midBottom rightCol" "footer footer footer footer";
+   grid-gap: 5px;
 }
 </style>
 </head>
 <body>
-
 	<jsp:include
 		page="${ application.getContextPath() }/views/common/sideBar.jsp"></jsp:include>
 
@@ -192,9 +191,7 @@
 		
 	}
 	
-	
-	
-	
+
 </script>
 
 </body>
