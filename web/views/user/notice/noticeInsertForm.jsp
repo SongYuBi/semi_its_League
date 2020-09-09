@@ -29,6 +29,9 @@
 <body>
 	<jsp:include page="../../common/sideBar.jsp"></jsp:include>
 	
+	
+	
+	
 	<c:if test="${ !empty sessionScope.loginUser and sessionScope.loginUser.userId.equals('admin') }">
 		<div class="outer">
 			<br>
