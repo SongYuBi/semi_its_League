@@ -31,8 +31,8 @@
 	.buttonboxes{
 	
 		border:2px solid lightgrey;
-		 width:700px;
-		 height:50px;
+		/*  width:700px;
+		 height:50px; */
 		 padding:5px;
 		 box-shadow:0 1px 2px #5e5d5d;
 		 text-align:center;
@@ -65,11 +65,11 @@
 		 font-size:20px;
 		 padding:10px;
 	}
-	#row{
+/* 	#row{
 		
 		border-bottom:2px solid lightgrey;
 	}
-	
+	 */
 
 </style>
 </head>
@@ -86,9 +86,7 @@
 	</div>
 	
 	
-	  <!-- 	 <div class="header">Header</div> 
-	   <div class="leftCol">L</div>
-	  <div class="rightCol">이런곳에 수정ㅎ면되</div>  -->
+	  
 	  
 	  
 	  <div class="midTop">
@@ -99,10 +97,7 @@
 	  	 	
 	  	 		<h2 font-weight="bold">QnA</h2>
 	  	 		
-	  	 		<!-- <div class="firstbox" align="center" >
-	  	 		<input id="box1" type="text" style="color:darkgrey" placeholder="키워드로 질문하기">
-	  	 		</div>
-	  	 		<br> -->
+	  	 		
 	  	 		<br>
 	  	 		
 	  	 		<div class="buttonboxes" align="center">

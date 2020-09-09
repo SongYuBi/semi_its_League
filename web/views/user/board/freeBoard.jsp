@@ -103,6 +103,9 @@ float:left;
 		</div>
 		<div class="box2">
 			<body>
+			
+			<form action="${ applicationScope.contextPath }/insert.bo" method="post">
+		
 				<div class="menu" align="center"
 					style="font-weight: 900; font-size: 50px; margin: 0 auto; margin-top: 40px">자유게시판</div>
 				<br clear="both">
@@ -185,6 +188,7 @@ float:left;
 			</h3>
 		</div>
 	</div>
+	</form>
 
 </body>
 </html>

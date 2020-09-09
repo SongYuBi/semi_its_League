@@ -36,6 +36,7 @@ public class UserDao {
 		String sql = prop.getProperty("insertUser");
 		
 		try {
+			
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, vo.getPfPwd());
 			pstmt.setString(2, vo.getPfNumber());
