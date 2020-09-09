@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeMain.css">
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeStyle.css">
 <link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeDefault.css">
-<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
+<link rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/userDefaultLayout.css">
 <style>
 /* 	.header {
 		grid-area: header;
@@ -91,6 +91,7 @@
 </style>
 </head>
 <body>
+
 	<jsp:include page="../../common/sideBar.jsp"></jsp:include>
 	
 	<div class="outer">
@@ -100,6 +101,7 @@
 	<div class="logo" align="center">
 		<img alt="" src="../../../resources/image/logo_jess.png" style="width:20%">
 	</div>
+
 	
 	<div class="wrapper">
 		<div class="head">

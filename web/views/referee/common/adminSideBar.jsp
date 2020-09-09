@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-	<!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>	 -->
+	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
     <script src="${ pageContext.request.contextPath }/resources/js/bootstrap.js"></script>
 	<script src="${ pageContext.request.contextPath }/resources/js/adminSideBar.js"></script>
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://bryanrojasq.wordpress.com">
-                <img src="http://placehold.it/200x50&text=LOGO" alt="LOGO">
+            <a class="navbar-brand" href="${ pageContext.request.contextPath }/views/admin/main/admin_Main.jsp">
+                <img src="${ pageContext.request.contextPath }/resources/image/logo_jess.png" alt="LOGO" width="200" height="50">
             </a>
         </div>
         <!-- Top Menu Items -->
@@ -44,7 +44,7 @@
                 </a>
             </li>            
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin User <b class="fa fa-angle-down"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">심판1 <b class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="#"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                     <li><a href="#"><i class="fa fa-fw fa-cog"></i> Change Password</a></li>
@@ -57,20 +57,10 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="../main/refereeMain.jsp" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-home"></i> 심판 메인  <i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-1" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.1</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.2</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 1.3</a></li>
-                    </ul>
+                    <a href="../main/refereeMain.jsp" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-home"></i> 심판 메인  </a>
                 </li>
                 <li>
-                    <a href="../league/refereeGameEvalution.jsp" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fas fa-edit"></i>  경기평가 관리<i class="fa fa-fw fa-angle-down pull-right"></i></a>
-                    <ul id="submenu-2" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.1</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
-                    </ul>
+                    <a href="../league/refereeGameEvalution.jsp" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fas fa-edit"></i>  경기평가 관리<!-- <i class="fa fa-fw fa-angle-down pull-right"> --></i></a>
                 </li>
                 <li>
                     <a href="../league/refereeSchedule.jsp">

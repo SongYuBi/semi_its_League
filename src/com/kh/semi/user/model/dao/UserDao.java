@@ -97,4 +97,82 @@ public class UserDao {
 		return loginUser;
 	}
 
+	public int searchPassword(Connection con, Profile_vo vo) {
+		System.out.println(vo);
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String sql = prop.getProperty("searchPassword");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vo.getPfPwd());
+			pstmt.setString(2, vo.getPfNumber());
+			pstmt.setString(3, vo.getPfName());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close(pstmt);
+		}
+		return result;
+	}
+
+	public String searchEmail(Connection con, Profile_vo vo) {
+		String email = "";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		
+		String sql = prop.getProperty("searchEmail");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, vo.getPfNumber());
+			pstmt.setString(2, vo.getPfName());
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				email = rs.getString("PF_EMAIL");
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return email;
+	}
+
+	public int searchUser(Connection con, Profile_vo vo) {
+		int search = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = prop.getProperty("searchUser");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			
+			pstmt.setString(1, vo.getPfNumber());
+			pstmt.setString(2, vo.getPfName());
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				search = rs.getInt(1);
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return search;
+	}
+
 }

@@ -6,44 +6,62 @@
 <link rel="stylesheet"
 	href="${ pageContext.request.contextPath }/resources/css/adminDefaultLayout.css">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <title>Insert title here</title>
 <style>
 .wrapper {
 	margin-left: 225px;
 }
+
 .header {
 	background: gray;
 }
+
 #myCarousel {
 	width: 25%;
 	margin-left: 37.5%;
 }
-.carousel-control.left{
-    color: currentColor;
+
+.carousel-control.left {
+	color: currentColor;
 }
-.carousel-control.right{
-    color: currentColor;
+
+.carousel-control.right {
+	color: currentColor;
 }
+
 .midTop {
 	background-color: white;
 }
+
 .matchDate {
-	font-weight:700;
-	border:1px solid black;
-	padding:10px;
+	font-weight: 700;
+	border: 1px solid black;
+	padding: 10px;
 }
-.table_area{
-	border:2px solid black;
-	padding:15px;
+
+.table_area {
+	border: 2px solid black;
+	padding: 15px;
+}
+
+#myModal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 </style>
 </head>
 <body>
-	<jsp:include
-		page="/views/referee/common/adminSideBar.jsp"></jsp:include>
+	<jsp:include page="/views/referee/common/adminSideBar.jsp"></jsp:include>
 
 	<div class="wrapper">
 		<div class="header">
@@ -53,7 +71,8 @@
 		<div class="rightCol"></div>
 		<div class="midTop">
 			<hr>
-			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel"
+				data-interval="false">
 				<!-- Indicators -->
 				<!-- <ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="" class="active"></li>
@@ -62,7 +81,7 @@
 				</ol> -->
 
 				<!-- Wrapper for slides -->
-				
+
 				<div class="carousel-inner">
 					<div class="item" id="carouselVal1">
 						<h1 id="carouselValue1" align="center">1</h1>
@@ -104,137 +123,161 @@
 
 				<!-- Left and right controls -->
 				<a class="left carousel-control" href="#myCarousel" id="downCount"
-					data-slide="prev" style="background:white"> <span
+					data-slide="prev" style="background: white"> <span
 					class="glyphicon glyphicon-chevron-left"></span> <span
 					class="sr-only">Previous</span>
 				</a> <a class="right carousel-control" href="#myCarousel"
-					data-slide="next" style="background:white"> <span
+					data-slide="next" style="background: white"> <span
 					class="glyphicon glyphicon-chevron-right"></span> <span
 					class="sr-only">Next</span>
 				</a>
 			</div>
 			<div class="table_area">
-			<div class="matchDate"></div>
-			<div>
-				<table class="table table-striped custab">					
-					<thead>
+				<div class="matchDate"></div>
+				<div>
+					<table class="table table-striped custab">
+						<thead>
+							<tr>
+								<th>리그</th>
+								<th>경기</th>
+								<th>구장</th>
+								<th class="text-center">결과입력</th>
+							</tr>
+						</thead>
 						<tr>
-							<th>리그</th>
-							<th>경기</th>
-							<th>구장</th>
-							<th class="text-center">결과입력</th>
+							<td>A리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>종합운동장</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="test.html" rel="modal:open" onclick="modal_open();"><span
+									class="glyphicon glyphicon-edit"></span> Edit</a>
 						</tr>
-					</thead>
-					<tr>
-						<td>A리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>종합운동장</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="test.html" rel="modal:open"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-					<tr>
-						<td>B리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>용산 아이파크</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-					<tr>
-						<td>C리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>용인 참스포츠</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-				</table>
+						<tr>
+							<td>B리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>용산 아이파크</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+						</tr>
+						<tr>
+							<td>C리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>용인 참스포츠</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+						</tr>
+					</table>
+
+				</div>
+				<div class="matchDate"></div>
+				<div>
+					<table class="table table-striped custab">
+						<thead>
+							<tr>
+								<th>리그</th>
+								<th>경기</th>
+								<th>구장</th>
+								<th class="text-center">결과입력</th>
+							</tr>
+						</thead>
+						<tr>
+							<td>A리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>종합운동장</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+						</tr>
+						<tr>
+							<td>B리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>용산 아이파크</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+						</tr>
+						<tr>
+							<td>C리그</td>
+							<td><span>1팀</span>:<span>2팀</span></td>
+							<td>용인 참스포츠</td>
+							<td class="text-center"><a class='btn btn-info btn-xs'
+								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+						</tr>
+					</table>
+
+				</div>
 
 			</div>
-			<div class="matchDate"></div>
-			<div>
-				<table class="table table-striped custab">
-					<thead>
-						<tr>
-							<th>리그</th>
-							<th>경기</th>
-							<th>구장</th>
-							<th class="text-center">결과입력</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>A리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>종합운동장</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-					<tr>
-						<td>B리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>용산 아이파크</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-					<tr>
-						<td>C리그</td>
-						<td><span>1팀</span>:<span>2팀</span></td>
-						<td>용인 참스포츠</td>
-						<td class="text-center"><a class='btn btn-info btn-xs'
-							href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-					</tr>
-				</table>
-
-			</div>
-			
-		</div>
 		</div>
 		<div class="midBottom"></div>
 		<div class="footer"></div>
-	</div>
-	<div id="myModal" class="modal">
-		<div class="modal-content">
-			
+
+		<div id="myModal" class="modal">
+			<div class="w3-sidebar w3-light-grey w3-card" style="width: 200px">
+				<a href="#" class="w3-bar-item w3-button">Link 1</a>
+				<button class="w3-button w3-block w3-left-align"
+					onclick="myAccFunc()">Accordion</button>
+				<div id="demoAcc" class="w3-bar-block w3-hide w3-white w3-card-4">
+					<a href="#" class="w3-bar-item w3-button">Link</a> <a href="#"
+						class="w3-bar-item w3-button">Link</a>
+				</div>
+				<div class="w3-dropdown-click">
+					<button class="w3-button" onclick="myDropFunc()">Dropdown</button>
+					<div id="demoDrop"
+						class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
+						<a href="#" class="w3-bar-item w3-button">Link</a> <a href="#"
+							class="w3-bar-item w3-button">Link</a>
+					</div>
+				</div>
+				<a href="#" class="w3-bar-item w3-button">Link 2</a> <a href="#"
+					class="w3-bar-item w3-button">Link 3</a>
+			</div>
+			<button onclick="modal_close();"></button>
 		</div>
 	</div>
 	<script>
-	// 현재 달로 변경해주는 함수
+		// 현재 달로 변경해주는 함수
 		$(document).ready(function() {
 			var month = getMonthDate() + 1;
-			
-			for(var i = 1; i < 13; i++) {
-				var $carouselValue = $("#carouselValue"+i);
-				if(month == $carouselValue.text()) {
-					$("#carouselVal" + i).attr("class","item active");
-					console.log($("#carouselVal"+i).text());
-					
+
+			for (var i = 1; i < 13; i++) {
+				var $carouselValue = $("#carouselValue" + i);
+				if (month == $carouselValue.text()) {
+					$("#carouselVal" + i).attr("class", "item active");
+					console.log($("#carouselVal" + i).text());
+
 				}
 			}
 		});
-	
-	// 현재 날짜로 변환
+
+		// 현재 날짜로 변환
 		$(document).ready(function() {
 			var date = getDate();
 			console.log(date);
 			$(".matchDate").text(date);
 		});
-	
-	// 날짜 구하기
+
+		// 날짜 구하기
 		function getMonthDate() {
 			var date = new Date().getMonth();
 			return date
 		};
-		
-		function getDate(){
+
+		function getDate() {
 			var date = new Date();
 			var year = date.getFullYear();
-			var month = date.getMonth()+1;
+			var month = date.getMonth() + 1;
 			var day = date.getDate();
-			var formatDate = year + "-" + ("0" + month).slice(-2) + "-" + ("0" + day).slice(-2);
+			var formatDate = year + "-" + ("0" + month).slice(-2) + "-"
+					+ ("0" + day).slice(-2);
 			return formatDate;
 		}
-		
-		
-		
-			
+
+		function modal_open() {
+			$("#myModal").show();
+		};
+
+		function modal_close() {
+			$("#myModal").hide();
+		}
 	</script>
 </body>
 </html>

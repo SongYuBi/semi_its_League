@@ -50,7 +50,7 @@ public class InsertUserServlet extends HttpServlet {
 		
 		vo.setPfPwd(password);
 		vo.setPfName(name);
-		vo.setPfNumber(jumin1+jumin2);
+		vo.setPfNumber(jumin1+"-"+jumin2);
 		vo.setPfEmail(Email);
 		vo.setPfAddress(address);
 		vo.setPfGender(gender);
