@@ -11,15 +11,15 @@
 <script
    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript"
-   src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet"
-   href="${ pageContext.request.contextPath }/resources/css/userDefaultLayout.css">
+   href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
 <link rel="stylesheet" type="text/css"
-   href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet"
-   href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet"
-   href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+   href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <title>Insert title here</title>
 
 <style type="text/css">
@@ -102,7 +102,7 @@ h3 {
 }
 
 tr {
-   height: 100px;
+   height: 80px;
 }
 
 th {
@@ -132,6 +132,8 @@ th {
 <body>
    <jsp:include
       page="${ application.contextPath }/views/common/sideBar.jsp"/>
+   <jsp:include
+		  page="${ application.contextPath }/views/user/comman/login.jsp"/>
       
    <div class="wrapper">
       <div class="head">
@@ -154,7 +156,7 @@ th {
          </div>
       </c:if>
             <div align="center">
-               <img src="../../../resources/image/banner.png"
+               <img src="${applicationScope.contextPath }/resources/image/chu/logo.png"
                   style="cursor: pointer">
             </div>
          </div>
@@ -162,13 +164,13 @@ th {
       <div class="header">
          <div class="visual" align="center">
             <div>
-               <img src="../../../resources/image/footer.png" class="banner">
+               <img src="${applicationScope.contextPath }/resources/image/chu/footer.png" class="banner">
             </div>
             <div>
-               <img src="../../../resources/image/footer.png" class="banner">
+               <img src="${applicationScope.contextPath }/resources/image/chu/footer.png" class="banner">
             </div>
             <div>
-               <img src="../../../resources/image/footer.png" class="banner">
+               <img src="${applicationScope.contextPath }/resources/image/chu/footer.png" class="banner">
             </div>
          </div>
       </div>
@@ -176,35 +178,35 @@ th {
       <div class="rightCol"></div>
       <div class="midTop">
          <div class="responsive wBtn">
-            <div align="center" class="datediv wdiv datedivB" onclick="chioe1();">
-               <h3>1<h3><span>목</span>
+            <div align="center" class="datediv wdiv datedivB date1" onclick="chioe1(this);">
+               <h3 class="h3">22</h3><span class="span">화</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe2();">
-               <h3>2<h3><span>금</span>
+            <div align="center" class="datediv wdiv date2" onclick="chioe1(this);">
+               <h3>23</h3><span>수</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe3();">
-               <h3>3<h3><span style="color: blue;">토</span>
+            <div align="center" class="datediv wdiv date3" onclick="chioe1(this);">
+               <h3>24</h3><span>목</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe4();">
-               <h3>4<h3><span style="color: red;">일</span>
+            <div align="center" class="datediv wdiv date4" onclick="chioe1(this);">
+               <h3>25</h3><span>금</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe5();">
-               <h3>5<h3><span>월</span>
+            <div align="center" class="datediv wdiv date5" onclick="chioe1(this);">
+               <h3>26</h3><span style="color: blue;">토</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe6();">
-               <h3>6<h3><span>화</span>
+            <div align="center" class="datediv wdiv date6" onclick="chioe1(this);">
+               <h3>27</h3><span style="color: red;">일</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe7();">
-               <h3>7<h3><span>수</span>
+            <div align="center" class="datediv wdiv date7" onclick="chioe1(this);">
+               <h3>28</h3><span>월</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe8();">
-               <h3>8<h3><span>목</span>
+            <div align="center" class="datediv wdiv date8" onclick="chioe1(this);">
+               <h3>29</h3><span>화</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe9();">
-               <h3>9<h3><span>금</span>
+            <div align="center" class="datediv wdiv date9" onclick="chioe1(this);">
+               <h3>30</h3><span>수</span>
             </div>
-            <div align="center" class="datediv wdiv" onclick="chioe10();">
-               <h3>10<h3><span style="color: blue;">토</span>
+            <div align="center" class="datediv wdiv date10" onclick="chioe1(this);">
+               <h3>1</h3><span>목</span>
             </div>
          </div>
          <div class="container-my">
@@ -212,7 +214,7 @@ th {
                <div class="table-title"></div>
 
                <!-- table div -->
-               <div style="margin-top: 70px;">
+               <div style="margin-top: 120px;width:1400px; margin-left:250px; margin-bottom:250px;">
                   <select id="selS">
                      <option>서울</option>
                      <option>경기</option>
@@ -513,7 +515,7 @@ th {
          </div>
       </div>
       <div class="footer" align="center">
-         <img src="../../../resources/image/footer.png">
+         <img src="${applicationScope.contextPath }/resources/image/chu/footer.png">
       </div>
    </div>
 
@@ -609,147 +611,154 @@ th {
       });
    
       
-      function chioe1() {
-         
-         for(var i = 1; i < 11; i++) {
-            if(i === 1) {
-               $(".tb1").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe2() {
-         
-         for(var i = 1; i < 11; i++) {
-            if(i === 2) {
-               $(".tb2").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe3() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 3) {
-               $(".tb3").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe4() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 4) {
-               $(".tb4").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe5() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 5) {
-               $(".tb5").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe6() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 6) {
-               $(".tb6").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      
-      function chioe7() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 7) {
-               $(".tb7").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      function chioe8() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 8) {
-               $(".tb8").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
-      };
-      function chioe9() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 9) {
-               $(".tb9").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
+      function chioe1(val) {
+    	  var day = $(val).children("h3").text();
+    	  var date = new Date();
+    	  var year = date.getFullYear();
+    	  var month = date.getMonth() + 1;
+    	  if(month < 10) {
+    		  month = '0' + month;
+    	  }
+    	  if(day < 10) {
+    		  
+    		  day = "0"  + day;
+    	  }
+    	  if(day == 1) {
+    		  month = month*1 + 1;
+    	  month +="";
+    		  
+    	  }
+    	  var fullDate = year + month + day;
+    	  console.log(fullDate);
 
+  
+    	  
+    			  
+    	  
+    	 /*  $.ajax({
+    		  url : "${applicationScope.contextPath}/selectMain.lg",
+    		  data : {fullDate:fullDate},
+    		  type : "get",
+    		  success : function(data) {
+    			  console.log(data);
+    		  },
+    		  error : function(err){
+    			  console.log("메인페이지 조회실패!");
+    		  }
+    		  
+    	  });  */
+    	  
+    	  
+    	  //첫 번째 div
+		 if($(val).hasClass("date1")){         
+         	for(var i = 1; i < 11; i++) {
+            	if(i === 1) {
+               	$(".tb1").show();
+            	}else {
+               	$(".tb" + i).hide();            
+            	} 
+	         }
+		 }
+		 
+		 // 두 번째 div
+		 if($(val).hasClass("date2")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 2) {
+		          $(".tb2").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 세 번째 div
+		 if($(val).hasClass("date3")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 3) {
+		          $(".tb3").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 네 번째 div
+		 if($(val).hasClass("date4")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 4) {
+		          $(".tb4").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 다섯 번째 div
+		 if($(val).hasClass("date5")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 5) {
+		          $(".tb5").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 여섯 번째 div
+		 if($(val).hasClass("date6")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 6) {
+		          $(".tb6").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 일곱 번째 div
+		 if($(val).hasClass("date7")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 7) {
+		          $(".tb7").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 여덟 번째 div
+		 if($(val).hasClass("date8")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 8) {
+		          $(".tb8").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 아홉 번째 div
+		 if($(val).hasClass("date9")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 9) {
+		          $(".tb9").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 // 열 번째 div
+		 if($(val).hasClass("date10")){
+			 for(var i = 1; i < 11; i++) {
+		         if(i === 10) {
+		          $(".tb10").show();
+		          }else {
+		           $(".tb" + i).hide();          
+		            } 
+		         }
+			 }
+		 
+		
+		 
       };
-      function chioe10() {
-         for(var i = 1; i < 11; i++) {
-            if(i === 10) {
-               $(".tb10").show();
-            }else {
-               $(".tb" + i).hide();            
-               
-            } 
-            
-         }
+      
 
-      };
-      
-      
-      
-      /*  로그인 창 띄우기 */
-      function login(){
-         console.log("asd");
-         window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
-      }
-      
-      function logout(){
-         var check = window.confirm("로그아웃");
-         
-         if(check){
-            location.href ="<%=request.getContextPath()%>/logout.me";
-         }
-      }
-      
-      
-      
    </script>
 
 
 </body>
+
 </html>
