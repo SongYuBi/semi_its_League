@@ -43,15 +43,14 @@
 	.wrapper {
 		display: grid;
 		grid-template-columns: 1fr 4fr 4fr 1fr;
-		/* grid-template-rows: 50px 100px 100px 30px; */
+	    grid-template-rows: 50px 100px 100px 30px; 
 		grid-auto-rows: minmax(100px, auto);
 		grid-template-areas: "header header header header"
 			"leftCol midTop midTop rightCol"
 			"leftCol midBottom midBottom rightCol" "footer footer footer footer";
 		grid-gap: 5px;
 	}
- */
-	/* .outer {
+     .outer {
 		width:800px;
 		height:500px;
 		background:white;
@@ -59,16 +58,18 @@
 		margin-top:50px;
 		margin-left:auto;
 		margin-right:auto;
-	} */
+	}
+	
+ */
 	body {
 		font-family: 'NotoKrR', '나눔 고딕', NotoKrR Gothic, "맑은 고딕", Malgun Gothic, '돋움',dotum,Helvetica,sans-serif;
 	}
 	.outer {
 	margin: 0 0 15px 0;
     margin-top: 0px;
-    margin-right: 0px;
+    margin-right: 90px;
     margin-bottom: 15px;
-    margin-left: 0px;
+    margin-left: 90px;
     border-bottom: 1px solid #969696;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -90,15 +91,23 @@
 </style>
 </head>
 <body>
-	<jsp:include page="${ application.getContextPath() }/views/common/refereeSideBar.jsp"></jsp:include>
+	<jsp:include page="../../common/sideBar.jsp"></jsp:include>
+	
+	<div class="outer">
+	
+	
+	
+	<div class="logo" align="center">
+		<img alt="" src="../../../resources/image/logo_jess.png" style="width:20%">
+	</div>
 	
 	<div class="wrapper">
-		<div class="head">head
-		<div align="center">it`s league</div>
+		<div class="head">
+		<div align="center"></div>
 		<div align="right">
-			<span>로그인</span>
-			<span>또는</span>
-			<span>회원가입</span>
+			<span></span>
+			<span></span>
+			<span></span>
 		</div> 
 		</div>
 		<div class="header"></div>
@@ -126,9 +135,7 @@
 
 		<!-- 게시판 검색 시작 { -->
 		<fieldset id="bo_sch">
-    		<legend>게시물 검색</legend>
-
-    		<form name="fsearch" method="get">
+			<form name="fsearch" method="get">
     		<input type="hidden" name="bo_table" value="3010">
     		<input type="hidden" name="sca" value="">
     		<input type="hidden" name="sop" value="and">
@@ -181,7 +188,7 @@
         	<tbody>
             	<tr class="bo_notice" bgcolor="#ffffff" onmouseover="this.style.backgroundColor=&#39;#fafafa&#39;" onmouseout="this.style.backgroundColor=&#39;#ffffff&#39;" style="background-color: rgb(255, 255, 255);"> 
             		<td class="td_num td_noti"><strong>공지</strong></td>
-                    <td class="td_subject"><a href="noticeInsertForm.jsp">공지 내용 1</a></td>
+                    <td class="td_subject"><a href="../notice/noticeDetail.jsp">SEMI PROJECT에 대하여...</a></td>
             		<td class="td_datetime">날짜</td>
             		<td class="td_num">조회수</td>
                 </tr>
@@ -274,5 +281,7 @@
 		<div class="footer"></div>
 		</div>
 	</div>
+	
+</div>
 </body>
 </html>
