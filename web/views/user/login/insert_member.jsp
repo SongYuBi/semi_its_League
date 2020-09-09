@@ -71,6 +71,7 @@
 </style>
 </head>
 <body>
+
 	<jsp:include
 		page="${ application.getContextPath() }/views/common/sideBar.jsp"></jsp:include>
 
@@ -191,6 +192,7 @@
 		
 	}
 	
+
 
 </script>
 

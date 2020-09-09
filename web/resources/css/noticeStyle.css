@@ -135,7 +135,7 @@
 .bo_current {color:#e8180c}
 #bo_list .cnt_cmt {display:inline-block;margin:0 0 0 3px;font-weight:bold}
 
-#bo_sch {float:right;margin-bottom:10px;padding-top:0px;text-align:center}
+#bo_sch {float:right;margin-bottom:10px;margin-top:10px;padding-top:0px;text-align:center}
 #bo_sch legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
 
 /* 게시판 쓰기 */

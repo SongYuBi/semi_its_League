@@ -9,14 +9,16 @@
 <link  rel="stylesheet" href="${ pageContext.request.contextPath }/resources/css/noticeDefault.css">
 <meta charset="UTF-8">
 <style>
-	.outer{
-		width:800px;
-		height:500px;
-		background:black;
-		color:white;
-		margin-left:auto;
-		margin-right:auto;
-		margin-top:50px;
+	.outer {
+	margin: 0 0 15px 0;
+    margin-top: 0px;
+    margin-right: 90px;
+    margin-bottom: 15px;
+    margin-left: 90px;
+    border-bottom: 1px solid #969696;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(150, 150, 150);
 	}
 	table {
 		border:1px solid white;
@@ -32,8 +34,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<jsp:include page="${ application.getContextPath() }/views/common/refereeSideBar.jsp"></jsp:include>
-	<div class="scontA   ">
+	<jsp:include page="../../common/sideBar.jsp"></jsp:include>
+	
+	<div class="logo" align="center">
+		<img alt="" src="../../../resources/image/logo_jess.png" style="width:20%">
+	</div>
+	
+	<div class="outer">
+	<div class="scontA">
 		<div class="bbsTopArea"></div>
 
 		<!-- 게시물 읽기 시작 { -->
@@ -60,7 +68,10 @@
 
       		<!-- 본문 내용 시작 { -->
 	        <div id="bo_v_con">
-				<p><span style="font-size:12pt;">﻿코로나19 확산 우려로</span></p><p><span style="font-size:12pt;">&nbsp;</span></p><p><span style="font-size:12pt;">올해는 대입 수험생들을 위한 54일(10월 10일~12월 2일) 기도 모임이 없습니다.</span>&nbsp;</p>				</div>
+				<p><span style="font-size:12pt;">﻿본문 내용은 이렇습니다.</span></p>
+				<p><span style="font-size:12pt;">이거 너무 어려운거 아닙니까?</span></p>
+				<p><span style="font-size:12pt;">미치겠습니다.</span></p>
+			</div>
     	    <!-- } 본문 내용 끝 -->
     	</section>
  
@@ -70,7 +81,7 @@
         	   <li><a href="" class="btn_b01">다음글</a></li>
         	</ul>
             <ul class="bo_v_com">
-        	    <li><a href="" class="btn_b01">목록</a></li>
+        	    <li><a href="../notice\noticeList.jsp" class="btn_b01">목록</a></li>
             </ul>
 		</div>
    		<!-- } 링크 버튼 끝 -->
@@ -87,7 +98,7 @@
 
 		<!-- } 게시글 읽기 끝 -->
 	</div>
-	<div class="outer">
+	
 	<br>
 	<h2 align="center"></h2>
 		

@@ -1,3 +1,369 @@
+                              </tr>
+                           </c:forEach>
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <!-- 7 -->
+                  <div class="hidediv">
+                     <table class="table table-bordered ta tb7"
+                        style="margin-top: 40px;">
+                        <thead>
+                           <tr>
+                              <th style="padding: 10px 10px;"><p>시간</p></th>
+                              <th style="padding: 10px 10px;"><p>리그</p></th>
+                              <th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
+                              <th style="padding: 10px 10px;"><p>추가,삭제
+                                 <p></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+
+                           <c:forEach var="c" begin="1" end="10" step="1">
+                              <tr>
+                                 <td>${c }77777</td>
+                                 <td>${c }</td>
+                                 <td>${c }</td>
+                                 <td><a class="add" title="Add" data-toggle="tolltip"></a>
+                                    <a class="edit" title="Edit" data-toggle="tooltip"></a> <a
+                                    class="delete" title="Delete" data-toggle="tooltip"></a></td>
+                              </tr>
+                           </c:forEach>
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <!-- 8 -->
+                  <div class="hidediv">
+                     <table class="table table-bordered ta tb8"
+                        style="margin-top: 40px;">
+                        <thead>
+                           <tr>
+                              <th style="padding: 10px 10px;"><p>시간</p></th>
+                              <th style="padding: 10px 10px;"><p>리그</p></th>
+                              <th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
+                              <th style="padding: 10px 10px;"><p>추가,삭제
+                                 <p></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+
+                           <c:forEach var="c" begin="1" end="10" step="1">
+                              <tr>
+                                 <td>${c }88888</td>
+                                 <td>${c }</td>
+                                 <td>${c }</td>
+                                 <td><a class="add" title="Add" data-toggle="tolltip"></a>
+                                    <a class="edit" title="Edit" data-toggle="tooltip"></a> <a
+                                    class="delete" title="Delete" data-toggle="tooltip"></a></td>
+                              </tr>
+                           </c:forEach>
+                        </tbody>
+                     </table>
+                  </div>
+
+                  <!-- 9 -->
+                  <div class="hidediv">
+                     <table class="table table-bordered ta tb9"
+                        style="margin-top: 40px;">
+                        <thead>
+                           <tr>
+                              <th style="padding: 10px 10px;"><p>시간</p></th>
+                              <th style="padding: 10px 10px;"><p>리그</p></th>
+                              <th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
+                              <th style="padding: 10px 10px;"><p>추가,삭제
+                                 <p></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+
+                           <c:forEach var="c" begin="1" end="10" step="1">
+                              <tr>
+                                 <td>${c }9999</td>
+                                 <td>${c }</td>
+                                 <td>${c }</td>
+                                 <td><a class="add" title="Add" data-toggle="tolltip"></a>
+                                    <a class="edit" title="Edit" data-toggle="tooltip"></a> <a
+                                    class="delete" title="Delete" data-toggle="tooltip"></a></td>
+                              </tr>
+                           </c:forEach>
+                        </tbody>
+                     </table>
+                  </div>
+                  <!-- 10 -->
+                  <div class="hidediv">
+                     <table class="table table-bordered ta tb10"
+                        style="margin-top: 40px;">
+                        <thead>
+                           <tr>
+                              <th style="padding: 10px 10px;"><p>시간</p></th>
+                              <th style="padding: 10px 10px;"><p>리그</p></th>
+                              <th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
+                              <th style="padding: 10px 10px;"><p>추가,삭제
+                                 <p></th>
+                           </tr>
+                        </thead>
+                        <tbody>
+
+                           <c:forEach var="c" begin="1" end="10" step="1">
+                              <tr>
+                                 <td>${c }1010</td>
+                                 <td>${c }</td>
+                                 <td>${c }</td>
+                                 <td><a class="add" title="Add" data-toggle="tolltip"></a>
+                                    <a class="edit" title="Edit" data-toggle="tooltip"></a> <a
+                                    class="delete" title="Delete" data-toggle="tooltip"></a></td>
+                              </tr>
+                           </c:forEach>
+                        </tbody>
+                     </table>
+                  </div>
+                  <!--10번끝 -->
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer" align="center">
+         <img src="../../../resources/image/footer.png">
+      </div>
+   </div>
+
+   <!-- slider banner -->
+   <script type="text/javascript">
+      $(".visual").slick({
+         slidesToShow : 1, // 한 화면에 보여질 컨텐츠 개수
+         slidesToScroll : 1,
+         arrows : false,
+         autoplay : true,
+         autoplaySpeed : 3000,
+         infinite : true,
+         speed : 1000,
+         pauseOnHover : true,
+         responsive : [ { /* 반응형웹*/
+            breakpoint : 960, /*  기준화면사이즈 */
+            settings : {
+               slidesToShow : 2
+            }
+         /*  사이즈에 적용될 설정 */
+         }, { /* 반응형웹*/
+            breakpoint : 768, /*  기준화면사이즈 */
+            settings : {
+               slidesToShow : 1
+            }
+         /*  사이즈에 적용될 설정 */
+         } ]
+      });
+   </script>
+
+   <!-- 날짜 -->
+   <script type="text/javascript">
+      $('.slider-single').slick({
+         slidesToShow : 1,
+         slidesToScroll : 1,
+         arrows : true,
+         fade : false,
+         adaptiveHeight : true,
+         infinite : false,
+         useTransform : true,
+         speed : 400,
+         cssEase : 'cubic-bezier(0.77, 0, 0.18, 1)',
+      });
+
+      $('.responsive').slick({
+         infinite : false,
+         speed : 500,
+         slidesToShow : 5,
+         slidesToScroll : 5,
+         responsive : [ {
+            breakpoint : 1024,
+            settings : {
+               slidesToShow : 1,
+               slidesToScroll : 1,
+               infinite : true,
+            }
+         }, {
+            breakpoint : 600,
+            settings : {
+               slidesToShow : 1,
+               slidesToScroll : 1
+            }
+         }, {
+            breakpoint : 480,
+            settings : {
+               slidesToShow : 1,
+               slidesToScroll : 1
+            }
+         }
+         ]
+      });
+
+      $(".datediv").click(function() {
+         $(this).siblings().removeClass("datedivB");
+         $(this).addClass("datedivB");
+
+         if ($(this).is(".datedivB") == "true") {
+
+         }
+      });
+   </script>
+
+   <script type="text/javascript">
+      $(function(){
+         for(var i = 1; i < 11; i++) {
+            if(i === 1) {
+               $(".tb1").show();
+               $("")
+            }else {
+               $(".tb" + i).hide();            
+            } 
+         }
+      });
+   
+      
+      function chioe1() {
+         
+         for(var i = 1; i < 11; i++) {
+            if(i === 1) {
+               $(".tb1").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe2() {
+         
+         for(var i = 1; i < 11; i++) {
+            if(i === 2) {
+               $(".tb2").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe3() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 3) {
+               $(".tb3").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe4() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 4) {
+               $(".tb4").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe5() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 5) {
+               $(".tb5").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe6() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 6) {
+               $(".tb6").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      
+      function chioe7() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 7) {
+               $(".tb7").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      function chioe8() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 8) {
+               $(".tb8").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+      };
+      function chioe9() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 9) {
+               $(".tb9").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+
+      };
+      function chioe10() {
+         for(var i = 1; i < 11; i++) {
+            if(i === 10) {
+               $(".tb10").show();
+            }else {
+               $(".tb" + i).hide();            
+               
+            } 
+            
+         }
+
+      };
+      
+      
+      
+      /*  로그인 창 띄우기 */
+      function login(){
+         console.log("asd");
+         window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
+      }
+      
+      function logout(){
+         var check = window.confirm("로그아웃");
+         
+         if(check){
+            location.href ="<%=request.getContextPath()%>/logout.me";
+         }
+      }
+      
+      
+      
+   </script>
+
+
+</body>
+=======
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
