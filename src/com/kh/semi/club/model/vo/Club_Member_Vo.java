@@ -1,4 +1,4 @@
-package com.kh.semi.club.vo;
+package com.kh.semi.club.model.vo;
 
 public class Club_Member_Vo implements java.io.Serializable{
 

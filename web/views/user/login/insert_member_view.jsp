@@ -84,6 +84,19 @@ function validate() {
     var phone2 = document.getElementById("phone2");
     var phone3 = document.getElementById("phone3");
     
+    
+   /*  if(!check(regul3,name,"이름을 제대로 입력하세요.")){
+    	return false;
+    }
+    
+    if(!check(re2,email,"이메일을 정확하게 입력해주세요.")){
+    	return false;
+    }
+    
+    if(!check(re,password,"패스워드는 4 ~ 12 글자사이의 숫자와 영어 대소문자를 입력해주세요.")){
+    	return false;
+    }  */
+    
     if ((email.value=="")){
         alert("이메일을 입력해주세요");
         email.focus();
@@ -199,7 +212,7 @@ function validate() {
 <input type="password" id="password_re" name="password_re" class="w3-input w3-border w3-border-black"  maxlength="12">
 
 <label style="float:left;">이름</label>
-<input type="text" id="name" name="name" class="w3-input w3-border w3-border-black" >
+<input type="text" id="name" name="name" class="w3-input w3-border w3-border-black" maxlength="20" >
 
 <label style="float:left;" >주민등록번호</label>
 <br><br>

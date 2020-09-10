@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
 	.header{
    grid-area: header;
@@ -164,7 +165,7 @@ border-bottom:2px solid gray;
 						<td>12</td>
 						<td>2</td>
 						<td>10</td>
-
+						<input type="hidden" id="teamNumber" value="5001">
 					</tr>
 				</tbody>
 			</table>
@@ -173,11 +174,21 @@ border-bottom:2px solid gray;
 
 <script type="text/javascript">
 
-	function login_click(){
-		console.log("??");
-		window.open('../login/loginView.jsp','로그인','resizeable=no width=500 height=300');
+$("#club_info_table tr").click(function(){
+		console.log("asd");
+		var str = "";
 		
-	}
+		var tr = $(this);
+		var td = tr.children();
+		var hi = tr.children().children();
+		var teamNumber =$("#teamNumber").val();
+		
+		console.log("클릭한 row의 모든 데이터 : " + td.text());
+		console.log("hidden : " + teamNumber);
+		
+		location.href="/semi/club_info?teamNumber="+teamNumber;
+	})
+	
 </script>
 	  </div>
 
