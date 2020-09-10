@@ -601,7 +601,9 @@ th {
 			}
 		});
 	</script>
+
   <script type="text/javascript">
+
       $(function(){
          for(var i = 1; i < 11; i++) {
             if(i === 1) {
@@ -652,7 +654,7 @@ th {
          });  */
          
          
-       
+
        if($(val).hasClass("date1")){         
             for(var i = 1; i < 11; i++) {
                if(i === 1) {
@@ -663,7 +665,7 @@ th {
             }
        }
        
-   
+
        if($(val).hasClass("date2")){
           for(var i = 1; i < 11; i++) {
                if(i === 2) {
@@ -673,7 +675,7 @@ th {
                   } 
                }
           }
-      
+
        if($(val).hasClass("date3")){
           for(var i = 1; i < 11; i++) {
                if(i === 3) {
@@ -683,7 +685,7 @@ th {
                   } 
                }
           }
-      
+
        if($(val).hasClass("date4")){
           for(var i = 1; i < 11; i++) {
                if(i === 4) {
@@ -693,7 +695,7 @@ th {
                   } 
                }
           }
-      
+
        if($(val).hasClass("date5")){
           for(var i = 1; i < 11; i++) {
                if(i === 5) {
@@ -703,7 +705,7 @@ th {
                   } 
                }
           }
-   
+
        if($(val).hasClass("date6")){
           for(var i = 1; i < 11; i++) {
                if(i === 6) {
@@ -754,11 +756,13 @@ th {
                }
           }
        
+
       
        
       };
       
 
    </script>
+
 </body>
 </html>
