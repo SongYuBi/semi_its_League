@@ -63,6 +63,7 @@
 
 	<jsp:include page="${ application.getContextPath() }/views/common/sideBar.jsp"></jsp:include>
 	
+	<c:if test="${ !empty sessionScope.loginUser }">
 	<div class="outer">
 	
 	
@@ -80,18 +81,18 @@
 	  	 <div class="tableArea" align="center">
 	  	 <br>
 				 <div class="text-area">
-	  	 	<form action="${ applicationScope.contextPath }" method="post">
+	  	 	<form action="${ applicationScope.contextPath }/insert.qna" method="post">
 				<table class="area-box">
 					<tr>
 						<tr></tr>
-						<td colspan="6"><input type="text" size="" style="width:1071px; height:50px;" name="title" ></td>
+						<td colspan="6"><input type="text_qna" size="" style="width:1071px; height:50px;" name="title" ></td>
 						 <br>
 					</tr>
 			
 					<tr>
 						<tr></tr>
 						<td colspan="3">
-							<textarea rows="15" cols="150" name="content" style="resize:none;"></textarea>
+							<textarea rows="15" cols="150" name="content_qna" style="resize:none;"></textarea>
 						</td>
 					</tr>
 				</table>
@@ -110,6 +111,7 @@
 	 	<img alt="" src="../../../resources/image/footer_jess.png" style="width:100%">
 	 </div>
 	</div>
+	</c:if>
 </body>
 </html>
 
