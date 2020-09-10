@@ -13,7 +13,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
 <!-- Bootstrap core CSS-->
 <link href="/semi/resources/css/bootstrap.min.css" rel="stylesheet">
@@ -76,7 +76,7 @@ p {
 					aria-label="Search" aria-describedby="basic-addon2">
 				<div class="input-group-append">
 					<button class="btn btn-primary" type="button">
-						<i class="fa fa-search"></i>
+						<i class="fas fa-search"></i></i>
 					</button>
 				</div>
 			</div>
@@ -87,7 +87,7 @@ p {
 
 			<li class="nav-item dropdown no-arrow"><a class="nav-link"
 				href="#" id="userDropdown" role="button"> <i
-					class="fa fa-user-circle fa-fw"></i>
+					class="fas fa-user-circle fa-fw"></i>
 			</a></li>
 		</ul>
 
@@ -267,7 +267,7 @@ p {
 
 				<!-- Scroll to Top Button-->
 				<a class="scroll-to-top rounded" href="#page-top"> 
-				<i class="fa fa-angle-up"></i>
+				<i class="fas fa-angle-up"></i>
 				</a>
 
 				<!-- Logout Modal-->
