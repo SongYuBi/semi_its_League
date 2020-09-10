@@ -157,6 +157,8 @@
             	<h1 class="fixed-top">9월</h1>
             	<!-- 토요일 -->
 				<div>            	
+				<!-- 테이블 날짜 -->
+				
             	<div style="width:90%;border:3px solid black; padding:10px; font-size:24px; font-weight:bold;"><span>2020</span><span>.08</span><span>.01</span><span>토요일</span></div>
             	<ul class="datelist" style="width:90%; padding:30px; height:100px;border-bottom:1px solid black;">
             		<li class="w1 tc">14R</li>
@@ -209,8 +211,10 @@
             		<li class="w8 tc">강남길</li>
             	</ul>
             </div>
+            
             <!-- 일요일 -->
-				<div>            	
+				<div>       
+				<!-- -->     	
             	<div style="width:90%;border:3px solid black; padding:10px; font-size:24px; font-weight:bold;"><span>2020</span><span>.08</span><span>.01</span><span>토요일</span></div>
             	<ul class="datelist" style="width:90%; padding:30px; height:100px;border-bottom:1px solid black;">
             		<li class="w1 tc">14R</li>
@@ -263,6 +267,7 @@
             		<li class="w8 tc">강남길</li>
             	</ul>
             </div>
+            
             <!-- 다음토요일 -->
 				<div>            	
             	<div style="width:90%;border:3px solid black; padding:10px; font-size:24px; font-weight:bold;"><span>2020</span><span>.08</span><span>.01</span><span>토요일</span></div>
@@ -399,7 +404,7 @@
      	<!-- 순위테이블끝 -->
      </div>
 	  <div class="footer" align="center" style="margin-top:100px;">
-	  	<img src="../../../resources/image/footer.png">
+	  	<img src="../../../resources/image/footer_jess.png">
 	  </div>
 	</div>
 	

@@ -160,7 +160,7 @@ th {
 			</div>
 		</c:if>
 				<div align="center">
-					<img src="../../../resources/image/banner.png"
+					<img src="resources/image/chu/logo.png"
 						style="cursor: pointer">
 				</div>
 			</div>
@@ -168,13 +168,13 @@ th {
 		<div class="header">
 			<div class="visual" align="center">
 				<div>
-					<img src="../../../resources/image/footer.png" class="banner">
+					<img src="resources/image/sj/mainImage1.jpg" class="banner">
 				</div>
 				<div>
-					<img src="../../../resources/image/footer.png" class="banner">
+					<img src="resources/image/sj/mainImage2.jpg" class="banner">
 				</div>
 				<div>
-					<img src="../../../resources/image/footer.png" class="banner">
+					<img src="resources/image/sj/mainImage3.jpg" class="banner">
 				</div>
 			</div>
 		</div>
@@ -182,35 +182,35 @@ th {
 		<div class="rightCol"></div>
 		<div class="midTop">
 			<div class="responsive wBtn">
-				<div align="center" class="datediv wdiv datedivB" onclick="chioe1();">
-					<h3>1<h3><span>목</span>
+				<div align="center" class="datediv wdiv datedivB" onclick="chioe1(this);">
+					<h3>22</h3><span>화</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe2();">
-					<h3>2<h3><span>금</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>23</h3><span>수</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe3();">
-					<h3>3<h3><span style="color: blue;">토</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>24</h3><span>목</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe4();">
-					<h3>4<h3><span style="color: red;">일</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>25</h3><span>금</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe5();">
-					<h3>5<h3><span>월</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>26</h3><span style="color: blue;">토</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe6();">
-					<h3>6<h3><span>화</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>27</h3><span style="color: red;">일</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe7();">
-					<h3>7<h3><span>수</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>28</h3><span>월</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe8();">
-					<h3>8<h3><span>목</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>29</h3><span>화</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe9();">
-					<h3>9<h3><span>금</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>30</h3><span>수</span>
 				</div>
-				<div align="center" class="datediv wdiv" onclick="chioe10();">
-					<h3>10<h3><span style="color: blue;">토</span>
+				<div align="center" class="datediv wdiv" onclick="chioe1(this);">
+					<h3>1</h3><span>목</span>
 				</div>
 			</div>
 			<div class="container-my">
@@ -231,7 +231,7 @@ th {
 						<!-- 1 -->
 						<div class="hidediv">
 							<table class="table table-bordered ta tb1"
-								style="margin-top: 40px;">
+								style="margin-top: 40px;" align="center">
 								<thead>
 									<tr>
 										<th style="padding: 10px 10px;"><p>시간</p></th>
@@ -242,284 +242,17 @@ th {
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }111</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
 								</tbody>
 							</table>
 						</div>
-						<!-- 2 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb2"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }2222</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 3 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb3"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }3333</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 4 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb4"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }4444</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 5 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb5"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }5555</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-						<!-- 6 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb6"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }66666</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 7 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb7"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }77777</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 8 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb8"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }88888</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 9 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb9"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }9999</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-						<!-- 10 -->
-						<div class="hidediv">
-							<table class="table table-bordered ta tb10"
-								style="margin-top: 40px;">
-								<thead>
-									<tr>
-										<th style="padding: 10px 10px;"><p>시간</p></th>
-										<th style="padding: 10px 10px;"><p>리그</p></th>
-										<th style="padding: 0 0 30px 0;"><span>팀1</span> vs <span>팀2</span></th>
-										<th style="padding: 10px 10px;"><p>추가,삭제
-											<p></th>
-									</tr>
-								</thead>
-								<tbody>
-
-									<c:forEach var="c" begin="1" end="10" step="1">
-										<tr>
-											<td>${c }1010</td>
-											<td>${c }</td>
-											<td>${c }</td>
-											<td><a class="add" title="Add" data-toggle="tolltip"></a>
-												<a class="edit" title="Edit" data-toggle="tooltip"></a> <a
-												class="delete" title="Delete" data-toggle="tooltip"></a></td>
-										</tr>
-									</c:forEach>
-								</tbody>
-							</table>
-						</div>
-						<!--10번끝 -->
+						<!-- 삭제됨 -->
+						
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="footer" align="center">
-			<img src="../../../resources/image/footer.png">
+			<img src="resources/image/chu/footer.png">
 		</div>
 	</div>
 
@@ -548,6 +281,7 @@ th {
 			/*  사이즈에 적용될 설정 */
 			} ]
 		});
+		
 	</script>
 
 	<!-- 날짜 -->
@@ -605,14 +339,54 @@ th {
   <script type="text/javascript">
 
       $(function(){
-         for(var i = 1; i < 11; i++) {
-            if(i === 1) {
-               $(".tb1").show();
-               $("")
-            }else {
-               $(".tb" + i).hide();            
-            } 
-         }
+    	  var day = $(".datedivB").children("h3").text();
+		  var date = new Date();
+		  var year = date.getFullYear();
+		  var month = date.getMonth() + 1;
+		  if(month < 10) {
+	            month = '0' + month;
+	         }
+	         if(day < 10) {
+	            
+	            day = "0"  + day;
+	         }
+	         if(day == 1) {
+	            month = month*1 + 1;
+	         month +="";
+	            
+	         }
+	         var fullDate = year + month + day;
+	         console.log(fullDate);
+	         
+	          $.ajax({
+	            url : "${applicationScope.contextPath}/selectMain.lg",
+	            data : {fullDate:fullDate},
+	            type : "get",
+	            success : function(data) {
+	               $tbody = $("table tbody");
+	               
+	               $tbody.html("");
+	               
+	               for(var key in data){
+	            	   $tr = $("<tr>");
+	            	   $mDateTd = $("<td>").text(data[key].MATCH_DATE);
+	            	   $mLeagueTd = $("<td>").text(data[key].LG_NAME);
+	            	   $mClubNameTd = $("<td>").text(data[key].CLUB_FID + " VS " + data[key].CLUB_SID);
+	            	   
+	            	   $tr.append($mDateTd);
+	            	   $tr.append($mLeagueTd);
+	            	   $tr.append($mClubNameTd);
+	            	   
+	            	   $tbody.append($tr);
+	            	   
+	               }
+	               
+	            },
+	            error : function(err){
+	               console.log("메인페이지 리그조회실패!");
+	            }
+	            
+	         });  
       });
    
       
@@ -636,132 +410,37 @@ th {
          var fullDate = year + month + day;
          console.log(fullDate);
 
-  
-         
-               
-         
-        /*  $.ajax({
+          $.ajax({
             url : "${applicationScope.contextPath}/selectMain.lg",
             data : {fullDate:fullDate},
             type : "get",
             success : function(data) {
-               console.log(data);
+               $tbody = $("table tbody");
+               
+               $tbody.html("");
+               
+               for(var key in data){
+            	   $tr = $("<tr>");
+            	   $mDateTd = $("<td>").text(data[key].MATCH_DATE);
+            	   $mLeagueTd = $("<td>").text(data[key].LG_NAME);
+            	   $mClubNameTd = $("<td>").text(data[key].CLUB_FID + " VS " + data[key].CLUB_SID);
+            	   
+            	   $tr.append($mDateTd);
+            	   $tr.append($mLeagueTd);
+            	   $tr.append($mClubNameTd);
+            	   
+            	   $tbody.append($tr);
+            	   
+               }
+               
             },
             error : function(err){
-               console.log("ë© ì ¸í  ì ´ì§  ì¡°í  ì ¤í ¨!");
+               console.log("메인페이지 리그조회실패!");
             }
             
-         });  */
-         
-         
-
-       if($(val).hasClass("date1")){         
-            for(var i = 1; i < 11; i++) {
-               if(i === 1) {
-                  $(".tb1").show();
-               }else {
-                  $(".tb" + i).hide();            
-               } 
-            }
-       }
-       
-
-       if($(val).hasClass("date2")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 2) {
-                $(".tb2").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date3")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 3) {
-                $(".tb3").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date4")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 4) {
-                $(".tb4").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date5")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 5) {
-                $(".tb5").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date6")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 6) {
-                $(".tb6").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date7")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 7) {
-                $(".tb7").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date8")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 8) {
-                $(".tb8").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date9")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 9) {
-                $(".tb9").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-
-       if($(val).hasClass("date10")){
-          for(var i = 1; i < 11; i++) {
-               if(i === 10) {
-                $(".tb10").show();
-                }else {
-                 $(".tb" + i).hide();          
-                  } 
-               }
-          }
-       
-
-      
+         });  
        
       };
-      
-
    </script>
 
 </body>
