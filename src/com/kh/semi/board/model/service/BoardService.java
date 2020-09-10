@@ -2,6 +2,7 @@ package com.kh.semi.board.model.service;
 import static com.kh.semi.common.JDBCTemplate.*;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 import com.kh.semi.board.model.dao.BoardDao;
 import com.kh.semi.board.model.vo.Board_vo;
@@ -24,7 +25,20 @@ public class BoardService {
 		
 		return result;
 	}
-
+	public ArrayList<Board_vo> selectList() {
+	      Connection con = getConnection();
+	      
+	      ArrayList<Board_vo> list = new BoardDao().selectList(con);
+	      
+	      close(con);
+	      
+	      return list;
+	   }
+	public int getListCount() {
+		
+		
+		return 0;
+	}
 }
 
 

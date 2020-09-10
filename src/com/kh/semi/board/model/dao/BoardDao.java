@@ -4,9 +4,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Properties;
 
+import com.kh.semi.board.model.service.BoardService;
 import com.kh.semi.board.model.vo.Board_vo;
 
 public class BoardDao {
@@ -58,6 +61,47 @@ public class BoardDao {
 		
 		
 		
+	}
+
+	public ArrayList<Board_vo> selectList(Connection con) {
+		 PreparedStatement pstmt = null;
+	      ResultSet rset = null;
+	      ArrayList<Board_vo> list = null;
+	      
+	      String query = prop.getProperty("selectList");
+	      
+	      try {
+	         pstmt = con.prepareStatement(query);
+	         rset=pstmt.executeQuery(query);
+	         
+	         list = new ArrayList<Board_vo>();
+	         
+	         while(rset.next()) {
+	            Board_vo b = new Board_vo();
+	            
+	            b.setBid(rset.getInt("BID"));
+	            b.setbType(rset.getInt("BTYPE"));
+	            b.setbNo(rset.getInt("BNO"));
+	            b.setbWriter(rset.getInt("BWRITER"));
+	            b.setbTitle(rset.getString("BTITLE"));
+	            b.setbContent(rset.getString("BCONTENT"));
+	            b.setbCount(rset.getInt("BCOUNT"));
+	            b.setbDate(rset.getDate("BDATE"));
+	            b.setModifyDate(rset.getDate("MODIFY_DATE"));
+	            b.setbStatus(rset.getString("B_STATUS"));
+	            
+	            list.add(b);
+	         }
+	      
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         close(pstmt);
+	         close(rset);
+	      }
+	      
+	      return list;
+	   
 	}
 
 }
