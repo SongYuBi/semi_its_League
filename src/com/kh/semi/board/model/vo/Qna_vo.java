@@ -1,4 +1,4 @@
-package com.kh.semi.board.vo;
+package com.kh.semi.board.model.vo;
 
 public class Qna_vo implements java.io.Serializable {
 	private int qnaId;

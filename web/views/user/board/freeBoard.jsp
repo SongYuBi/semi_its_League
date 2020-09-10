@@ -107,6 +107,8 @@ float:left;
 					style="font-weight: 900; font-size: 50px; margin: 0 auto; margin-top: 40px">자유게시판</div>
 				<br clear="both">
 
+			
+
 				<div class="wrap" style="margin-left:1100px;">
 					<div class="checkbox-container" style="margin-top:7px;">
 						<input type="checkbox" id="a"> <label for="a"
@@ -155,8 +157,9 @@ float:left;
 								<td>2020.09.05</td>
 							</tr>
 						</tbody>
-
 					</table>
+				
+				
 					<hr style="margin-top:-15px;">
 					<a class="btn btn-default pull-right" href="post00001.html" >글쓰기</a>
 
