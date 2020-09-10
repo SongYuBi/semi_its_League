@@ -58,7 +58,24 @@ pageEncoding="UTF-8"/>
 	 		</tr>
 	 	</tbody>
 	</table>
+
+	</div>
+	<br><br>
+	<button class="w3-input w3-border" id="member_out" name="member_out" style="width:100px; float:right" onclick="member_out();">방출</button>
 	<script>
+	function member_out(){
+		var array = "";
+		if(confirm("선수를 방출 하시겠습니까? ")){
+			$("#userListTable").find(':checkbox').each(function(){
+				array+= $(this).val();
+				/* 체크박스의 값을 부여해서 하나하나 담아서 컨트롤러로 넘겨주면 될듯 */
+			})
+		}else{
+			
+		}
+		
+	}</script>
+		<script>
 	$(function(){
 		$.ajax({
 			url:"memberList.club",
@@ -91,24 +108,5 @@ pageEncoding="UTF-8"/>
 	});
 
 	</script>
-	
-	
-
-	</div>
-	<br><br>
-	<button class="w3-input w3-border" id="member_out" name="member_out" style="width:100px; float:right" onclick="member_out();">방출</button>
-	<script>
-	function member_out(){
-		var array = "";
-		if(confirm("선수를 방출 하시겠습니까? ")){
-			$("#userListTable").find(':checkbox').each(function(){
-				array+= $(this).val();
-				/* 체크박스의 값을 부여해서 하나하나 담아서 컨트롤러로 넘겨주면 될듯 */
-			})
-		}else{
-			
-		}
-		
-	}</script>
 </body> 
 </html>

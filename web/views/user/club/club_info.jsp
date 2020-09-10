@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 <link rel="stylesheet" type="text/css"
    href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -12,6 +13,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script type="text/javascript"
    src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <title>Insert title here</title>
@@ -119,6 +123,58 @@
 	font-size: 200%;
 	text-align:center;
 }
+
+
+
+ /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+    
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; /* Could be more or less, depending on screen size */      
+            height: 40%;                    
+        }
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+	.member_list{
+		font-size: 150%;
+		
+	}
+	.check_box_size{
+		zoom: 1.5;
+	}
+	.list_margin{
+	
+	}
+
+
 </style>
 
 </head>
@@ -132,10 +188,10 @@
 		<div class="rightCol">이런곳에 수정ㅎ면되</div>
 		<div class="midTop">
 		<div class="img_back">
-				<p class="team_name">울산 현대 축구단</p>
+				<p class="team_name">${club_info.clubName }</p>
 				
-						<p class="font-white">공식 홈페이지 :</p>
-				<p>온라인 샵 :</p>
+				<!-- 		<p class="font-white">공식 홈페이지 :</p> -->
+		<!-- 		<p>온라인 샵 :</p> -->
 		
 			
 				</div>
@@ -164,7 +220,7 @@
 					</tr>
 				</tbody>
 			</table>
-		 <button id = "memBer" class="w3-btn w3-round memBer" onclick="member_management();">선수관리</button>
+		 <button id = "member" class="w3-btn w3-round memBer" >선수관리</button>
 		</div>
 		<div class="midBottom">
 			<h4 class="rank">순위</h4>
@@ -195,6 +251,7 @@
 						<td>12</td>
 						<td>2</td>
 						<td>10</td>
+						<input type="hidden" id="teamNumber" value="5001">
 					</tr>
 				</tbody>
 			</table>
@@ -223,9 +280,12 @@
 	<table id="LeagueInfoTable" border="1" class="w3-table"> 
 	 	<thead>
 	 		<tr>
-	 			<th width="100px">팀1</th>
-	 			<th width="200px">팀2</th>
-	 			<th width="200px">국적</th>
+	 			<th width="100px">리그명</th>
+	 			<th width="200px">일시</th>
+	 			<th width="200px">팀 1</th>
+	 			<th width="200px">팀 2</th>
+	 			<th width="200px">구장</th>
+	 			<th width="200px">심판</th>
 	 		</tr>
 	 	</thead>
 	 	<tbody>
@@ -318,5 +378,86 @@
 	
 		<div class="footer">Footer</div>
 	</div>
+	
+	
+	<!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+     <span class="close">&times;</span>    
+    <h2>선수 관리</h2>
+	<div style="float:left;">
+		<input type="text" id="search_member" name="search_member" class="w3-input w3-border" style="width:400px;" >
+	</div>
+	<div style="float:right;">
+		<button name="member_management" id="member_management"  class="w3-input w3-border" style="width:100px;">검색</button>
+	</div>
+	<div>
+	<table id="userListTable"> 
+	 	<thead>
+	 		
+	 	</thead>
+	 	<tbody  class="member_list">
+	 		<!-- 임의 값 넣기 -->
+	 		<tr>
+	 			<td style="padding:10px;">asada@naver.com</td>
+	 			<td style="padding:10px;">김*호</td>
+	 			<td style="padding:10px;"><input type="checkbox" id="" class="check_box_size" ></td>
+	 		</tr>
+	 		<tr>
+	 			<td style="padding:10px;">asada@naver.com</td>
+	 			<td style="padding:10px;">김*호</td>
+	 			<td style="padding:10px;"><input type="checkbox" id="" class="check_box_size" ></td>
+	 		</tr>
+	 		<tr>
+	 			<td></td>
+	 			<td></td>
+	 			<td></td>
+	 		</tr>
+	 	</tbody>
+	</table>
+
+	</div>
+	<br><br>
+	<button class="w3-input w3-border" id="member_out" name="member_out" style="width:100px; float:right" onclick="member_out();">방출</button>
+      </div>
+ 
+    </div>
+	
+<script>
+
+$(function (){
+
+	// Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("member");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];                                          
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    
+})
+
+
+</script>
 </body>
 </html>

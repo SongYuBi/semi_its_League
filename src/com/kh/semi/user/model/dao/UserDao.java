@@ -84,6 +84,7 @@ public class UserDao {
 				loginUser.setPfModifyDate(rs.getDate("PF_MODIFY_DATE"));
 				loginUser.setPfPhone(rs.getString("PF_PHONE"));
 				
+				System.out.println("login user " + loginUser);
 			}
 			
 		} catch (SQLException e) {
