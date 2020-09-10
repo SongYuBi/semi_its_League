@@ -92,11 +92,12 @@
 	  <div class="midTop">
 	  	<div style="border:1px solid blue;width:100%; background:#F8F8F8; height:200px;">
 	  		<span class="league-name">It's Man League</span>
-	  		<select class="selectSt">
-	  			<option>Seoul20(서울지역)</option>
-	  			<option>Gyeonggi(경기지역)</option>
-	  			<option>Incheon(인천지역)</option>
-	  			<option>Daejun(대전지역)</option>
+	  		<select class="selectSt" onchange="selectLeague(this);">
+	  			<option value="SEOUL01">SEOUL01(서울지역)</option>
+	  			<option value="SEOUL02">SEOUL02(서울지역)</option>
+	  			<option value="SEOUL03">SEOUL03(서울지역)</option>
+	  			<option value="SEOUL04">SEOUL04(서울지역)</option>
+	  			<option value="SEOUL05">SEOUL05(서울지역)</option>
 	  		</select>		
 	  	</div>
 	  	
@@ -140,5 +141,39 @@
 	  	<img src="../../../resources/image/footer.png">
 	  </div>
 	</div>
+	
+	<script type="text/javascript">
+	
+		function selectLeague(val) {
+			console.log(val);
+			var text = "";
+			var txt = "";
+			var i = $(val).children();
+			console.log(i);
+			for(var j = 0; j < i.length; j++) {
+				
+				if(i[j].selected){
+					text = i[j].text;
+					console.log("text  : "  + text);
+					txt = text.split('(');
+					console.log(txt);
+				}
+			}
+			
+			$.ajax({
+				url : "${applicationScope.contextPath}/selectLeague.lg",
+				data : {leagueName : txt[0]},
+				type: "get",
+				success : function(data) {
+					console.log("성공");
+				},
+				error : function(err) {
+						console.log("리그정보조회실패!");
+				}
+				
+			});	
+			
+		};
+	</script>
 </body>
 </html>

@@ -8,11 +8,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Properties;
 
 import com.kh.semi.league.model.vo.Match_vo;
+import com.kh.semi.league.vo.League_vo;
 
 public class LeagueDao {
 	private Properties prop = new Properties();
@@ -50,9 +52,10 @@ public class LeagueDao {
 				hmap = new HashMap<String, Object>();
 				
 				hmap.put("LG_NAME", rset.getString("LG_NAME"));
-				hmap.put("MATCH_FID", rset.getInt("CLUB_FID"));
-				hmap.put("MATCH_SID", rset.getInt("CLUB_SID"));
 				hmap.put("MATCH_DATE", rset.getDate("MATCH_DATE"));
+				hmap.put("CLUB_FID", rset.getNString(3));
+				hmap.put("CLUB_SID", rset.getString(4));
+				
 				
 				list.add(hmap);
 				
@@ -69,6 +72,65 @@ public class LeagueDao {
 		
 		
 		return list;
+	}
+
+
+	public League_vo selectLeague(Connection con, String leagueName) {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		HashMap<String, Object> hmap = null;
+		League_vo league = null;
+		
+		ArrayList<HashMap<String, Object>> list = null;
+		
+		String query = prop.getProperty("selectLeague");
+				
+		
+		try {
+			pstmt = con.prepareStatement(query);
+			pstmt.setString(1, leagueName);
+			
+			rset = pstmt.executeQuery();
+			list = new ArrayList<HashMap<String, Object>>();
+			league = new League_vo();
+			
+			while(rset.next()) {
+				hmap = new HashMap<String, Object>();
+				
+				league.setLgName(rset.getString("LG_NAME"));
+				league.setLgHost(rset.getString("LG_HOST"));
+				league.setLgMinPlayer(rset.getInt("LG_MIN_PLAYER"));
+				league.setLgMaxPlayer(rset.getInt("LG_MAX_PLAYER"));
+				league.setLgSubPlayer(rset.getInt("LG_SUB_PLAYER"));
+				league.setLgPlayer(rset.getInt("LG_PLAYER"));
+				league.setLgSDate(rset.getDate("LG_SDATE"));
+				league.setLgEDate(rset.getDate("LG_EDATE"));
+				//league.set
+			
+				
+				
+				//list.add(hmap);
+				hmap.put("league", league);
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+
+	public void selectLeagueFirst(Connection con) {
+			Statement stmt = null;
+			ResultSet rset= null;
+			HashMap<String,Object> hmap = null;
+			
+			String query = prop.getProperty("selectLeagueFirst");
+			
+			
+			
+			
 	}
 
 }

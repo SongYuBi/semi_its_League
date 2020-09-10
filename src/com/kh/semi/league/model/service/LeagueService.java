@@ -9,6 +9,7 @@ import java.util.HashMap;
 
 import com.kh.semi.league.model.dao.LeagueDao;
 import com.kh.semi.league.model.vo.Match_vo;
+import com.kh.semi.league.vo.League_vo;
 
 public class LeagueService {
 
@@ -21,6 +22,20 @@ public class LeagueService {
 		close(con);
  		
 		return list;
+	}
+
+	public void selectLeague(String leagueName) {
+		Connection con = getConnection();
+		
+		League_vo league = new LeagueDao().selectLeague(con, leagueName);
+		
+	}
+
+	public void selectLeagueFirst() {
+		Connection con = getConnection();
+		
+			new LeagueDao().selectLeagueFirst(con);
+		
 	}
 
 
