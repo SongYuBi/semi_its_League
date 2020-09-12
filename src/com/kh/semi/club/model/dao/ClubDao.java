@@ -113,7 +113,7 @@ public class ClubDao {
 				
 				System.out.println(match_vo);
 				list.add(match_vo);
-				
+				//commit
 			}
 					
 		} catch (SQLException e) {
