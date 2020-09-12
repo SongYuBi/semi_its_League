@@ -141,7 +141,7 @@
 					<button type="button" class="btn" >등록하기</button>
 				</div>	  
 			</form>
-
+ 
 		</div>
 
 	</div>

@@ -15,7 +15,7 @@ public class BoardService {
 		Connection con = getConnection();
 		
 		int result = new BoardDao().insertBoard(con, newBoard);
-		
+		 
 		//1이상일 경우는 정보한행이 담김거이므로  commit
 		if(result > 0) {
 			commit(con);
