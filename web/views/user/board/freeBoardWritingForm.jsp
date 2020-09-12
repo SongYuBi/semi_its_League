@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="css/bootstrap.css">
-
+ 
 <style>
 	#default-div {
 		display:grid;

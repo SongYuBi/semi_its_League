@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import com.kh.semi.board.model.dao.BoardDao;
 import com.kh.semi.board.model.vo.Board_vo;
 import com.kh.semi.board.model.vo.PageInfo;
-
+ 
 public class BoardService {
 
 	public int insertBoard(Board_vo newBoard) {

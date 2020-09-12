@@ -12,7 +12,7 @@ import java.util.Properties;
 
 import com.kh.semi.board.model.vo.Board_vo;
 import com.kh.semi.board.model.vo.PageInfo;
-
+ 
 public class BoardDao {
 	
 	private Properties prop = new Properties();
