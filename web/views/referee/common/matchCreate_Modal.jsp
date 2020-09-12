@@ -159,6 +159,7 @@ jQuery Modal
 			$("#open").hide();
 			$(".back").hide();
 		});
+
 	});
 
 	function myAccFunc1() {
