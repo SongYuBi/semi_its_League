@@ -59,8 +59,35 @@ pageEncoding="UTF-8"/>
   "footer footer footer footer";
   grid-gap: 5px;
  }
+ 
+ 
+ 
+ /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+    
+        /* Modal Content/Box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 25%; /* Could be more or less, depending on screen size */                          
+        }
+      
 </style>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
@@ -71,7 +98,7 @@ function validate() {
     
     //이름 정규화 공식
      var regul3 = /^[가-힝a-zA-Z]{2,}$/;
-
+	
     var password = document.getElementById("password");
     var password_re = document.getElementById("password_re");
     var email = document.getElementById("Email");
@@ -83,7 +110,7 @@ function validate() {
     var phone1 = document.getElementById("phone1");
     var phone2 = document.getElementById("phone2");
     var phone3 = document.getElementById("phone3");
-    
+    var email_check = document.getElementById("email_check");
     
    /*  if(!check(regul3,name,"이름을 제대로 입력하세요.")){
     	return false;
@@ -151,23 +178,28 @@ function validate() {
     }
     
     if ((phone1.value=="")){
-        alert("이메일을 입력해주세요");
+        alert("번호  입력해주세요");
         phone1.focus();
         return false;
     }
     
     if ((phone2.value=="")){
-        alert("이메일을 입력해주세요");
+        alert("번호  입력해주세요");
         phone2.focus();
         return false;
     }
     
     if ((phone3.value=="")){
-        alert("이메일을 입력해주세요");
+        alert("번호 입력해주세요");
         phone3.focus();
         return false;
     }
     
+    if ((email.value=="")){
+        alert("이메일을 입력해주세요");
+        email.focus();
+        return false;
+    }
     
     
 	var index = false;
@@ -184,15 +216,39 @@ function validate() {
 	if(index == false){
 		alert("성별을 눌러주세요.");
 	}
-    
-   
+	var pass = false;
+	
+   if(pass === true){
+	   alert("true");
+	   return true;
+   }else{
+	   alert("아이디 중복확인을 눌러주세요.")
+	   return false;
+   }
 	
 }
+
 </script>
 
 </head>
 <body>
- <form name="insertUser" action="<%= request.getContextPath() %>/insertUser.me" method="post" onsubmit="return validate();">
+
+
+	<!-- The Modal -->
+    <div id="myModal" class="modal">
+ 
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>    
+        <br>
+        <br>                                                           
+        	<h4 id="ment"> ${ment}</h4>
+	
+	</div>
+
+      </div>
+
+<input type="hidden" value="false" id="email_double_check">
 	<jsp:include page="${ application.getContextPath() }/views/common/sideBar.jsp"></jsp:include>
 	
 	<div class="wrapper">
@@ -201,10 +257,18 @@ function validate() {
 	  <div class="rightCol">이런곳에 수정ㅎ면되</div>
 	  <div class="midTop">
 	  <div id="div_1">
-	  
-<label style="float:left;">이메일</label>
-<input type="Email" id="Email" name="Email" class="w3-input w3-border w3-border-black"  maxlength="30">
+	
+<label style="float:left;">이메일</label><br><br>
+  <div style="float:left;">
+<input type="Email" id="Email" name="Email" class="w3-input w3-border w3-border-black"  maxlength="30" style="width:300px;">
+</div>
 
+<div>
+<button class="w3-btn w3-red" id="double_check" onclick="double_check_();">중복 확인</button><br>
+
+ <form name="insertUser" action="<%= request.getContextPath() %>/insertUser.me" method="post" onsubmit="return validate();">
+</div>
+<br>
 <label style="float:left;">비밀번호</label>
 <input type="password" id="password" name="password" class="w3-input w3-border w3-border-black"  maxlength="12">
 
@@ -256,7 +320,7 @@ function validate() {
 <br><br>
 <label style="float:left;">이메일 인증</label><br><br>
 <div style="float:left;">
-<input type="Email" id="email_check' name="email_check" class="w3-input w3-border">
+<input type="Email" id="email_check" name="email_check" class="w3-input w3-border" style="width:250px;">
 </div >
 
 <div>
@@ -272,5 +336,97 @@ function validate() {
 </form>
 	  <div class="footer">Footer</div>
 	</div>
+	
+	<!-- 중복확인 창 -->
+	<script>
+
+	/* $(function (){
+
+		// Get the modal
+	    var modal = document.getElementById('myModal');
+
+	    // Get the button that opens the modal
+	    var btn = document.getElementById("myBtn");
+
+	    // Get the <span> element that closes the modal
+	    var span = document.getElementsByClassName("close")[0];                                          
+
+	    // When the user clicks on the button, open the modal 
+	   
+	        modal.style.display = "block";
+	 
+
+	    // When the user clicks on <span> (x), close the modal
+	    span.onclick = function() {
+	        modal.style.display = "none";
+	        location.href="views/user/mainPage/mainPage.jsp";
+
+	    }
+
+	    // When the user clicks anywhere outside of the modal, close it
+	    window.onclick = function(event) {
+	        if (event.target == modal) {
+	            modal.style.display = "none";
+	        }
+	    }
+	})
+	 */
+	
+	
+	
+function double_check_(){
+	var email =$("#Email").val();
+	console.log(email);
+	
+	$.ajax({
+		url:"/semi/double_check",
+		type:"get",
+		data:{email:email},
+		success: function(data){
+			// Get the modal
+		    var modal = document.getElementById('myModal');
+			
+			pass = true;
+			console.log(pass);
+		    // Get the button that opens the modal
+		    var btn = document.getElementById("myBtn");
+
+		    // Get the <span> element that closes the modal
+		    var span = document.getElementsByClassName("close")[0];  
+		    
+		    var email =$("#Email").val();
+		    var ment = $("#ment");
+		  
+		    ment.text(data);
+		    modal.style.display = "block";
+		    
+		   /*  // When the user clicks on the button, open the modal 
+		    btn.onclick = function() {
+  		   	   modal.style.display = "block";
+  			  }
+ */
+		    // When the user clicks on <span> (x), close the modal
+		    span.onclick = function(event) {
+		    	if (event.target == modal) {
+		            modal.style.display = "none";
+		        }
+		    }
+
+		    // When the user clicks anywhere outside of the modal, close it
+		    window.onclick = function(event) {
+		        if (event.target == modal) {
+		            modal.style.display = "none";
+		        }
+		    }
+		},
+		error: function(err){
+			console.log("check박스 불러오기 실패");
+			
+		}
+	});
+}
+	</script>
+	
+	
 </body>
 </html>

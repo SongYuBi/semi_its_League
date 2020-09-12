@@ -175,4 +175,29 @@ public class UserDao {
 		return search;
 	}
 
+	public int doublecheck(Connection con, String email) {
+		int result = 0;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = prop.getProperty("doublecheck");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, email);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				result = rs.getInt("COUNT_CHECK");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+
+		
+		return result;
+	}
+
 }

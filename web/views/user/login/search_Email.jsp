@@ -161,7 +161,6 @@ function validate() {
 
       </div>
  
-    </div>
 </c:if>
 
 <form name="insertUser" action="<%= request.getContextPath() %>/searchEmail.me" method="post" onsubmit="return validate();">

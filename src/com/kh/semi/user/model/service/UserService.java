@@ -61,4 +61,14 @@ public class UserService {
 		return email;
 	}
 
+	public int doublecheck(String email) {
+		Connection con = getConnection();
+		
+		int result = dao.doublecheck(con,email);
+		
+		
+		close(con);
+		return result;
+	}
+
 }
