@@ -56,6 +56,9 @@
   width: 130%; 
      height: 100px;  
     background-color:#111B39; }
+    .qnaCatogory{
+    	align:left;
+    }
 	
 </style>
 </head>
@@ -80,8 +83,22 @@
 	  	 <div class="tableArea" align="center">
 	  	 <br>
 				 <div class="text-area">
-	  	 	<form action="${ applicationScope.contextPath }" method="post">
+	  	 	<form action="/semi/insert.qna" method="post">
 				<table class="area-box">
+				<tr class="qnaCategory">
+					<td>QnA</td>
+					<td>
+						<select name="category">
+							<option value="10">공통</option>
+							<option value="20">매치취소</option>
+							<option value="30">매치진행</option>
+							<option value="40">서비스</option>
+							<option value="50">매칭신청</option>
+							<option value="60">구장관련</option>
+						</select>
+					</td>
+				</tr>
+				
 					<tr>
 						<tr></tr>
 						<td colspan="6"><input type="text" size="" style="width:1071px; height:50px;" name="title" ></td>
