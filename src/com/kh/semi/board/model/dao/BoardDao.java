@@ -6,10 +6,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
 import java.sql.Statement;
+
 import java.util.ArrayList;
 import java.util.Properties;
 
+import com.kh.semi.board.model.service.BoardService;
 import com.kh.semi.board.model.vo.Board_vo;
 import com.kh.semi.board.model.vo.PageInfo;
 
@@ -63,6 +66,7 @@ public class BoardDao {
 		
 		
 	}
+
 	public ArrayList<Board_vo> selectListWithPaging(Connection con, PageInfo pi) {
 	      PreparedStatement pstmt = null;
 	      ResultSet rset = null;
@@ -81,12 +85,14 @@ public class BoardDao {
 	         pstmt.setInt(2, endRow);
 	         
 	         rset = pstmt.executeQuery();
+
 	         
 	         list = new ArrayList<Board_vo>();
 	         
 	         while(rset.next()) {
 	            Board_vo b = new Board_vo();
 	            
+
 	            b.setBid(rset.getInt(1));
 	            b.setbType(rset.getInt(2));
 	            b.setbNo(rset.getInt(3));
@@ -97,6 +103,7 @@ public class BoardDao {
 	            b.setbDate(rset.getDate(8));
 	            b.setModifyDate(rset.getDate(9));
 	            b.setbStatus(rset.getString(10));
+
 	            
 	            list.add(b);
 	         }
@@ -107,6 +114,7 @@ public class BoardDao {
 	         close(pstmt);
 	         close(rset);
 	      }
+
 	      System.out.println(list);
 	      return list;
 	   }
@@ -135,6 +143,7 @@ public class BoardDao {
 	      
 	      return listCount;
 	   }
+
 }
 
 

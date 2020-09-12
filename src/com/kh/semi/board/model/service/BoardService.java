@@ -26,16 +26,19 @@ public class BoardService {
 		
 		return result;
 	}
+
 	public ArrayList<Board_vo> selectListWithPaging(PageInfo pi) {
 	      Connection con = getConnection();
 	      
 	      ArrayList<Board_vo> list = new BoardDao().selectListWithPaging(con, pi);
+
 	      
 	      close(con);
 	      
 	      return list;
 	   }
 	public int getListCount() {
+
 	      Connection con = getConnection();
 	      
 	      int listCount = new BoardDao().getListCount(con);
@@ -43,6 +46,7 @@ public class BoardService {
 	      close(con);
 	      return listCount;
 	   }
+
 }
 
 

@@ -198,7 +198,7 @@
 					
 			<p class="team_result">역대 전적</p>
 			<p class="team_result_value">30전 12승 18패</p>
-			
+			<input type="hidden" id="clubId"value="${club_info.clubId }">
 			<p class="team_result_value">구단 인원 : 6명</p>
 			<p class="team_result_value">참가 중인 리그 : it's ManLeague busan</p>
 			<br><br>
@@ -300,30 +300,52 @@
 	
 	
 	$("#slider-div").children().click(function(){
-	
+		var teamNumber =$("#clubId").val();
+		var tema = "<%=request.getParameter("clubId")%>";
 		var _month = $(this).text();
 		var month = _month.substring(0,1);
-		console.log(month);
+		console.log(teamNumber);
 		
 		for(var i = 1 ; i < 13; i++){
 			if(month == i ){
-
-				var $tableBody = $("#LeagueInfoTable tbody");
+				$.ajax({
+					url:"searchTeamMatch?month="+month+"&teamNumber="+teamNumber,
+					type:"get",
+					success:function(data){
+						console.log(data);
+						
+						var $LeagueInfoTable =$("#LeagueInfoTable tbody");
+						
+						$LeagueInfoTable.html('');
+						
+						$.each(data,function(index,value){
+							var $tr = $('<tr>');
+							
+							var $lgNameTd = $("<td>").text(value.lgName);
+							var $matchDateTd = $("<td>").text(value.matchDate);
+							var $clubFNameTd = $("<td>").text(value.clubFName);
+							var $clubSNameTd = $("<td>").text(value.clubSName);
+							var $stdNameTd = $("<td>").text(value.stdName);
+							var $RefNameTd = $("<td>").text(value.ref_name);
+							
+							$tr.append($lgNameTd);
+							$tr.append($matchDateTd);
+							$tr.append($clubFNameTd);
+							$tr.append($clubSNameTd);
+							$tr.append($stdNameTd);
+							$tr.append($RefNameTd);
+							
+							$LeagueInfoTable.append($tr);
+							
+						});
+						
+						
+					},
+					error: function(err){
+						console.log("실패");
+					}
 				
-				$tableBody.html('');
-				
-				var $tr = $('<tr>');
-				var $noTd = $("<td>").text("일본");
-				var $nameTd = $("<td>").text("한국");
-				var $nationTd = $("<td>").text("12시 30분 입니다요");
-				
-				console.log("테이블은 생성이 안되나?");
-				
-				$tr.append($noTd);
-				$tr.append($nameTd);
-				$tr.append($nationTd);
-				
-				$tableBody.append($tr);
+			});
 			}
 		}
 	});

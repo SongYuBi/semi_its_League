@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Properties;
 
 import com.kh.semi.club.model.vo.Club_vo;
+import com.kh.semi.common.vo.match_view_vo;
 import com.kh.semi.user.model.dao.UserDao;
 
 public class ClubDao {
@@ -60,7 +61,7 @@ public class ClubDao {
 		ResultSet rs = null;
 		Club_vo vo = null;
 		String sql = prop.getProperty("getClub_info");
-		
+		System.out.println(sql);
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, teamNumber);
@@ -81,6 +82,46 @@ public class ClubDao {
 
 		
 		return vo;
+	}
+
+
+
+	// 경기 일정 검색하기 (해당 팀)
+	public ArrayList searchTeamMatch(Connection con, String startDate, String endDate, int teamNumber) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList list = new ArrayList();
+	 
+		
+		String sql = prop.getProperty("searchTeamMatch");
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, teamNumber);
+			pstmt.setString(2, startDate);
+			pstmt.setString(3, endDate);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				match_view_vo match_vo = new match_view_vo();
+				match_vo.setLgName(rs.getString("LG_NAME"));
+				match_vo.setMatchDate(rs.getDate("MATCH_DATE"));
+				match_vo.setClubFName(rs.getString("CLUB_NAME"));
+				match_vo.setClubSName(rs.getString("CLUB_NAME_1"));
+				match_vo.setStdName(rs.getString("STD_NAME"));
+				match_vo.setRef_name(rs.getString("REF_NAME"));
+				
+				System.out.println(match_vo);
+				list.add(match_vo);
+				//commit
+			}
+					
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return list;
 	}
 
 }

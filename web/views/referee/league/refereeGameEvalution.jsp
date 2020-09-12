@@ -52,17 +52,13 @@
 	padding: 15px;
 }
 
-#myModal {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+
+
 </style>
 </head>
 <body>
 	<jsp:include page="/views/referee/common/adminSideBar.jsp"></jsp:include>
-
+	
 	<div class="wrapper">
 		<div class="header">
 			<h1>경기 평가</h1>
@@ -148,9 +144,8 @@
 							<td>A리그</td>
 							<td><span>1팀</span>:<span>2팀</span></td>
 							<td>종합운동장</td>
-							<td class="text-center"><a class='btn btn-info btn-xs'
-								href="test.html" rel="modal:open" onclick="modal_open();"><span
-									class="glyphicon glyphicon-edit"></span> Edit</a>
+							<td class="text-center"><a class='btn btn-info btn-xs' id="myModalbtn">
+							<span class="glyphicon glyphicon-edit"></span> Edit</a>
 						</tr>
 						<tr>
 							<td>B리그</td>
@@ -185,7 +180,7 @@
 							<td><span>1팀</span>:<span>2팀</span></td>
 							<td>종합운동장</td>
 							<td class="text-center"><a class='btn btn-info btn-xs'
-								href="#"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+								href="#"><span class="glyphicon glyphicon-edit" id="modal_btn"></span> Edit</a>
 						</tr>
 						<tr>
 							<td>B리그</td>
@@ -209,30 +204,9 @@
 		</div>
 		<div class="midBottom"></div>
 		<div class="footer"></div>
-
-		<div id="myModal" class="modal">
-			<div class="w3-sidebar w3-light-grey w3-card" style="width: 200px">
-				<a href="#" class="w3-bar-item w3-button">Link 1</a>
-				<button class="w3-button w3-block w3-left-align"
-					onclick="myAccFunc()">Accordion</button>
-				<div id="demoAcc" class="w3-bar-block w3-hide w3-white w3-card-4">
-					<a href="#" class="w3-bar-item w3-button">Link</a> <a href="#"
-						class="w3-bar-item w3-button">Link</a>
-				</div>
-				<div class="w3-dropdown-click">
-					<button class="w3-button" onclick="myDropFunc()">Dropdown</button>
-					<div id="demoDrop"
-						class="w3-dropdown-content w3-bar-block w3-white w3-card-4">
-						<a href="#" class="w3-bar-item w3-button">Link</a> <a href="#"
-							class="w3-bar-item w3-button">Link</a>
-					</div>
-				</div>
-				<a href="#" class="w3-bar-item w3-button">Link 2</a> <a href="#"
-					class="w3-bar-item w3-button">Link 3</a>
-			</div>
-			<button onclick="modal_close();"></button>
-		</div>
+		
 	</div>
+	<jsp:include page="/views/referee/common/matchCreate_Modal.jsp"></jsp:include>
 	<script>
 		// 현재 달로 변경해주는 함수
 		$(document).ready(function() {
@@ -271,13 +245,6 @@
 			return formatDate;
 		}
 
-		function modal_open() {
-			$("#myModal").show();
-		};
-
-		function modal_close() {
-			$("#myModal").hide();
-		}
 	</script>
 </body>
 </html>
