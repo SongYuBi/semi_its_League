@@ -24,17 +24,23 @@ public class LeagueService {
 		return list;
 	}
 
-	public void selectLeague(String leagueName) {
+	public HashMap<String, Object> selectLeague(String leagueName) {
 		Connection con = getConnection();
 		
-		League_vo league = new LeagueDao().selectLeague(con, leagueName);
+		HashMap<String, Object> hmap = new LeagueDao().selectLeague(con, leagueName);
+		
+		close(con);
+		
+		return hmap;
 		
 	}
 
-	public void selectLeagueFirst() {
+
+	public void selectAllLeague() {
 		Connection con = getConnection();
 		
-			new LeagueDao().selectLeagueFirst(con);
+		new LeagueDao().selectAllLeague(con);
+			
 		
 	}
 
