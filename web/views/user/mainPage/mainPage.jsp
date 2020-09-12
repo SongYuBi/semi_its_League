@@ -13,7 +13,7 @@
 <script type="text/javascript"
 	src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <link rel="stylesheet"
-	href="${ pageContext.request.contextPath }/resources/css/defaultLayout.css">
+	href="${ pageContext.request.contextPath }/resources/css/userDefaultLayout.css">
 <link rel="stylesheet" type="text/css"
 	href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 <link rel="stylesheet"
