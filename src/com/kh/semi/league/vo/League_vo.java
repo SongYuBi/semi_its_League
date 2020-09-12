@@ -17,13 +17,15 @@ public class League_vo implements java.io.Serializable{
 	private String areaCode;	//지역코드(AREA_CODE) (FK)
 	private int stdFid;			//첫 번째 구장 고유 번호(STD_FID)(FK)
 	private int stdSid;			//두 번째 구장 고유 번호(STD_SID)(FK)
+	private String stdFName;	//join 시 사용할 STD_FID 에 해당하는 STD_NAME (JOIN / FK);
+	private String stdSName;	//join 시 사용할 STD_SID 에 해당하는 STD_NAME (JOIN / FK); 
 	
 	public League_vo() {
 		
 	}
 
 	public League_vo(String lgId, String lgHost,String lgName ,int lgMinPlayer, int lgSubPlayer, int lgMaxPlayer, int lgPlayer,
-			Date lgSDate, Date lgEDate, String lgReward, String areaCode, int stdFid, int stdSid) {
+			Date lgSDate, Date lgEDate, String lgReward, String areaCode, int stdFid, int stdSid, String stdFName, String stdSName) {
 		super();
 		this.lgId = lgId;
 		this.lgHost = lgHost;
@@ -38,6 +40,8 @@ public class League_vo implements java.io.Serializable{
 		this.areaCode = areaCode;
 		this.stdFid = stdFid;
 		this.stdSid = stdSid;
+		this.stdFName = stdFName;
+		this.stdSName = stdSName;
 	}
 
 	@Override
@@ -45,7 +49,7 @@ public class League_vo implements java.io.Serializable{
 		return "League_vo [lgId=" + lgId + ", lgHost=" + lgHost +",lgName= " + lgName + ", lgMinPlayer=" + lgMinPlayer + ", lgSubPlayer="
 				+ lgSubPlayer + ", lgMaxPlayer=" + lgMaxPlayer + ", lgPlayer=" + lgPlayer + ", lgSDate=" + lgSDate
 				+ ", lgEDate=" + lgEDate + ", lgReward=" + lgReward + ", areaCode=" + areaCode + ", stdFid=" + stdFid
-				+ ", stdSid=" + stdSid + "]";
+				+ ", stdSid=" + stdSid + ", stdFName="+stdFName +", stdSName=" + stdSName + "]";
 	}
 
 	public String getLgId() {
@@ -150,6 +154,23 @@ public class League_vo implements java.io.Serializable{
 	public void setStdSid(int stdSid) {
 		this.stdSid = stdSid;
 	}
+	
+	public String getStdFName() {
+		return stdFName;
+	}
+	
+	public String getStdSName() {
+		return stdSName;
+	}
+	
+	public void setStdFName(String stdFName) {
+		this.stdFName = stdFName;
+	}
+	
+	public void setStdSName(String stdSName) {
+		this.stdSName =stdSName;
+	}
+	
 	
 	
 	

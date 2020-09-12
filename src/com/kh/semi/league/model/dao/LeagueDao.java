@@ -15,6 +15,7 @@ import java.util.Properties;
 
 import com.kh.semi.league.model.vo.Match_vo;
 import com.kh.semi.league.vo.League_vo;
+import com.sun.corba.se.spi.orbutil.fsm.State;
 
 public class LeagueDao {
 	private Properties prop = new Properties();
@@ -75,13 +76,11 @@ public class LeagueDao {
 	}
 
 
-	public League_vo selectLeague(Connection con, String leagueName) {
+	public HashMap<String, Object> selectLeague(Connection con, String leagueName) {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		HashMap<String, Object> hmap = null;
-		League_vo league = null;
 		
-		ArrayList<HashMap<String, Object>> list = null;
 		
 		String query = prop.getProperty("selectLeague");
 				
@@ -91,11 +90,11 @@ public class LeagueDao {
 			pstmt.setString(1, leagueName);
 			
 			rset = pstmt.executeQuery();
-			list = new ArrayList<HashMap<String, Object>>();
-			league = new League_vo();
+			ArrayList<String>list = new ArrayList<String>();
+			League_vo league = new League_vo();
+			hmap = new HashMap<String, Object>();
 			
 			while(rset.next()) {
-				hmap = new HashMap<String, Object>();
 				
 				league.setLgName(rset.getString("LG_NAME"));
 				league.setLgHost(rset.getString("LG_HOST"));
@@ -105,32 +104,48 @@ public class LeagueDao {
 				league.setLgPlayer(rset.getInt("LG_PLAYER"));
 				league.setLgSDate(rset.getDate("LG_SDATE"));
 				league.setLgEDate(rset.getDate("LG_EDATE"));
-				//league.set
+				league.setStdFName(rset.getString("STD_FNAME"));
+				league.setStdSName(rset.getString("STD_SNAME"));
 			
 				
+				String referee = new String();
+				referee = rset.getString("REF_NAME");
+				list.add(referee);
 				
-				//list.add(hmap);
-				hmap.put("league", league);
+				
 			}
+			
+			hmap.put("league", league);
+			hmap.put("referee", list);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
+		}finally {
+			
+			close(rset);
+			close(pstmt);
 		}
 		
-		return null;
+		return hmap;
+	}
+
+	public void selectLeagueForMain(Connection con) {
+		Statement stmt = null;
+		ResultSet rset = null;
+		League_vo league = null;
+		
+		String query = prop.getProperty("selectLeagueForMain");
+		
 	}
 
 
-	public void selectLeagueFirst(Connection con) {
-			Statement stmt = null;
-			ResultSet rset= null;
-			HashMap<String,Object> hmap = null;
-			
-			String query = prop.getProperty("selectLeagueFirst");
-			
-			
-			
-			
+	public void selectAllLeague(Connection con) {
+		Statement stmt = null;
+		ResultSet rset = null;
+		
+		String query = prop.getProperty("selectAllLeague");
+		
+		
 	}
 
 }

@@ -127,9 +127,16 @@
 	  	<div style="float:left; margin-left:100px; margin-top:20px; text-align:center; margin-right:150px;">
 	  		<h2>리그</h2>
 	  		<select class="selop" name="league">
-	  			<option value="league1">리그1</option>
-	  			<option value="league2">리그2</option>
-	  			<option value="league3">리그3</option>
+	  			<option value="allLrankLeague">전체</option>
+     				<option value="SEOUL01">SEOUL01</option>
+     				<option value="SEOUL02">SEOUL02</option>
+     				<option value="SEOUL03">SEOUL03</option>
+     				<option value="GYEONGGI01">GYEONGGI01</option>
+     				<option value="GYEONGGI02">GYEONGGI02</option>
+     				<option value="GYEONGGI03">GYEONGGI03</option>
+     				<option value="INCHEON01">INCHEON01</option>
+     				<option value="INCHEON02">INCHEON02</option>
+     				<option value="INCHEON03">INCHEON03</option>
 	  		</select>
 	  	</div>
 	  	<!-- 구단 -->
@@ -148,7 +155,7 @@
 		</div>
 	  	</div>
 	  </div>
-	  <div class="midTop" style="margin-top:40px; background:#F8F8F8; border:1px solid blue;" align="center">
+	  <div class="midTop" style="margin-top:40px; background:#F8F8F8; border:1px solid blue;margin-top:100px;" align="center">
 	
 	  
 	  	<div class="container-my">
@@ -332,33 +339,35 @@
      	<h1>순위</h1>
      	<!-- 조회 -->
      	<div style="background:#F8F8F8; border:1px solid blue; width:100%; height:150px;" align="center" >
-     		<div style="float:left; margin-right:100px;margin-left:150px; margin-top:20px;">
+     		<div style="float:left; margin-right:100px;margin-left:220px; margin-top:20px;">
      		<h2>리그</h2>
      			<select class="selop" name="rankLeague">
      				<option value="allLrankLeague">전체</option>
-     				<option value="rankleague3">리그3</option>
-     				<option value="rankleague2">리그2</option>
-     				<option value="rankleague1">리그1</option>
+     				<option value="SEOUL01">SEOUL01</option>
+     				<option value="SEOUL02">SEOUL02</option>
+     				<option value="SEOUL03">SEOUL03</option>
+     				<option value="GYEONGGI01">GYEONGGI01</option>
+     				<option value="GYEONGGI02">GYEONGGI02</option>
+     				<option value="GYEONGGI03">GYEONGGI03</option>
+     				<option value="INCHEON01">INCHEON01</option>
+     				<option value="INCHEON02">INCHEON02</option>
+     				<option value="INCHEON03">INCHEON03</option>
      			</select>	
      		</div>
-     		<div style="float:left; margin-right:170px;margin-left:70px; margin-top:20px;">
-     			<h2>시즌</h2>
-     			<select class="selop" name="rankSeason">
-     				<option value="allseason">전체</option>
-     				<option value="season5">5</option>
-     				<option value="season4">4</option>
-     				<option value="season3">3</option>
-     				<option value="season2">2</option>
-     				<option value="season1">1</option>
-     			</select>
-     		</div>
-     		<div style="margin-left:0px; margin-top:20px; float:left;margin-right:0px;">
+     		
+     		<div style="margin-left:300px; margin-top:20px; float:left;margin-right:0px;">
      			<h2>대회명</h2>
      			<select class="selop" name="rankName">
-     				<option value="its4">잇츠맨4</option>
-     				<option value="its3">잇츠맨3</option>
-     				<option value="its2">잇츠맨2</option>
-     				<option value="its1">잇츠맨1</option>
+     				<option value="allLrankLeague">전체</option>
+     				<option value="League_Man">League_Man</option>
+     				<option value="KH_AkaLeauge">KH_AkaLeauge</option>
+     				<option value="AdelFore_Cup">AdelFore_Cup</option>
+     				<option value="Run_Away">Run_Away</option>
+     				<option value="GLeague202">GLeague202</option>
+     				<option value="Eight_League">Eight_League</option>
+     				<option value="Soi_League">Soi_League</option>
+     				<option value="JM_League">JM_League</option>
+     				<option value="SSK_League">SSK_League</option>
      			</select>
      		</div>
      	</div>
@@ -411,7 +420,8 @@
 	
 	<script type="text/javascript">
 		function joinLeague() {
-			location.href="leagueJoinForm.jsp";
+			//location.href="${applicationScope.contextPath}/leagueJoin.lg";
+			location.href="${applicationScope.contextPath}/views/user/league/leagueJoinForm.jsp";
 		}
 	</script>
 </body>
